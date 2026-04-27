@@ -11,10 +11,10 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Forjacero · Mantenimiento de Maquinaria Industrial Premium";
+    document.title = "Axon Systems · Ingeniería Industrial & Sistemas de Control";
     const meta = document.querySelector('meta[name="description"]');
     const content =
-      "Mantenimiento predictivo, correctivo y overhaul de maquinaria industrial. 38 años de precisión, uptime 99.4%, respuesta 24/7.";
+      "Ingeniería industrial, automatización, SCADA y telemetría para plantas críticas. Diseño de procesos, PLC/DCS, IIoT y functional safety bajo IEC 61511.";
     if (meta) meta.setAttribute("content", content);
     else {
       const m = document.createElement("meta");

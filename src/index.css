@@ -1,75 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Industrial Editorial Design System
-   Charcoal canvas, brass + amber accents, aged paper neutrals.
+/* Telemetry / Operations Design System
+   Near-black canvas, neon green telemetry accent, surface glass cards.
    All colors HSL.
 */
 
 @layer base {
   :root {
     /* Core canvas */
-    --background: 24 10% 8%;            /* deep charcoal */
-    --foreground: 36 30% 92%;           /* aged paper */
+    --background: 220 16% 5%;            /* near-black */
+    --foreground: 210 10% 92%;
 
-    --surface: 24 12% 11%;              /* card slightly lifted */
-    --surface-elevated: 24 14% 14%;
+    --surface: 220 14% 9%;
+    --surface-elevated: 220 13% 12%;
 
-    --card: 24 12% 11%;
-    --card-foreground: 36 30% 92%;
+    --card: 220 14% 9%;
+    --card-foreground: 210 10% 92%;
 
-    --popover: 24 14% 14%;
-    --popover-foreground: 36 30% 92%;
+    --popover: 220 13% 12%;
+    --popover-foreground: 210 10% 92%;
 
-    /* Brand */
-    --primary: 32 55% 52%;              /* warm amber */
-    --primary-foreground: 24 20% 8%;
-    --primary-glow: 36 78% 62%;
+    /* Brand — neon telemetry green */
+    --primary: 152 100% 50%;
+    --primary-foreground: 220 16% 5%;
+    --primary-glow: 152 100% 60%;
 
-    --secondary: 24 35% 28%;            /* rich brass */
-    --secondary-foreground: 36 40% 95%;
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 210 10% 92%;
 
-    --accent: 36 65% 58%;               /* brass highlight */
-    --accent-foreground: 24 20% 8%;
+    --accent: 152 100% 50%;
+    --accent-foreground: 220 16% 5%;
 
-    --muted: 24 8% 18%;
-    --muted-foreground: 30 12% 62%;
+    --muted: 220 12% 14%;
+    --muted-foreground: 215 10% 60%;
 
-    --destructive: 8 70% 48%;
-    --destructive-foreground: 36 40% 95%;
+    --warn: 38 100% 55%;
+    --danger: 4 90% 58%;
 
-    --border: 30 14% 20%;
-    --input: 30 14% 18%;
-    --ring: 32 55% 52%;
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 210 10% 95%;
 
-    --radius: 0.25rem;
+    --border: 220 12% 18%;
+    --input: 220 12% 16%;
+    --ring: 152 100% 50%;
 
-    /* Editorial gradients */
-    --gradient-amber: linear-gradient(135deg, hsl(32 70% 55%), hsl(24 50% 35%));
-    --gradient-fade: linear-gradient(180deg, hsl(24 10% 8% / 0), hsl(24 10% 8% / 0.95));
-    --gradient-radial: radial-gradient(ellipse at top, hsl(32 50% 25% / 0.4), transparent 60%);
-    --gradient-edge: linear-gradient(90deg, transparent, hsl(32 55% 52% / 0.6), transparent);
+    --radius: 0.5rem;
 
-    /* Premium shadows */
-    --shadow-deep: 0 30px 80px -20px hsl(0 0% 0% / 0.6);
-    --shadow-glow: 0 20px 60px -15px hsl(32 70% 50% / 0.35);
-    --shadow-inset: inset 0 1px 0 hsl(36 30% 92% / 0.06);
+    /* Gradients */
+    --gradient-glass: linear-gradient(180deg, hsl(220 14% 11% / 0.7), hsl(220 14% 8% / 0.5));
+    --gradient-fade: linear-gradient(180deg, hsl(220 16% 5% / 0), hsl(220 16% 5% / 0.95));
+    --gradient-radial: radial-gradient(ellipse at top, hsl(152 70% 25% / 0.25), transparent 60%);
+    --gradient-edge: linear-gradient(90deg, transparent, hsl(152 100% 50% / 0.6), transparent);
+    --gradient-neon: linear-gradient(135deg, hsl(152 100% 50%), hsl(170 100% 45%));
+
+    /* Shadows */
+    --shadow-deep: 0 30px 80px -20px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 40px -8px hsl(152 100% 50% / 0.45);
+    --shadow-inset: inset 0 1px 0 hsl(210 10% 92% / 0.04);
 
     /* Motion */
     --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
 
-    /* Sidebar (kept for shadcn) */
-    --sidebar-background: 24 12% 10%;
-    --sidebar-foreground: 36 20% 80%;
-    --sidebar-primary: 32 55% 52%;
-    --sidebar-primary-foreground: 24 20% 8%;
-    --sidebar-accent: 24 14% 14%;
-    --sidebar-accent-foreground: 36 30% 92%;
-    --sidebar-border: 30 14% 20%;
-    --sidebar-ring: 32 55% 52%;
+    /* Sidebar */
+    --sidebar-background: 220 14% 8%;
+    --sidebar-foreground: 210 10% 80%;
+    --sidebar-primary: 152 100% 50%;
+    --sidebar-primary-foreground: 220 16% 5%;
+    --sidebar-accent: 220 13% 12%;
+    --sidebar-accent-foreground: 210 10% 92%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 152 100% 50%;
   }
 }
 
@@ -94,12 +98,8 @@
 }
 
 @layer utilities {
-  .font-display {
-    font-family: 'Playfair Display', 'Times New Roman', serif;
-    font-feature-settings: "lnum";
-  }
   .font-mono-ed {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
   }
 
   .text-balance { text-wrap: balance; }
@@ -118,7 +118,19 @@
     background-size: 32px 32px;
   }
 
-  .gradient-amber { background: var(--gradient-amber); }
+  .bg-dots {
+    background-image: radial-gradient(hsl(var(--primary) / 0.18) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .gradient-neon { background: var(--gradient-neon); }
   .gradient-radial { background: var(--gradient-radial); }
   .shadow-deep { box-shadow: var(--shadow-deep); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
@@ -130,6 +142,10 @@
 
   .marquee {
     animation: marquee 40s linear infinite;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px hsl(var(--primary) / 0.5);
   }
 }
 
@@ -148,5 +164,16 @@
   50%      { opacity: 1; }
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.25; }
+}
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(2400%); }
+}
+
 .animate-fade-up { animation: fade-up 0.9s var(--ease-editorial) both; }
 .animate-glow { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-blink { animation: blink 1.6s ease-in-out infinite; }

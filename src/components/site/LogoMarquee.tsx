@@ -1,22 +1,23 @@
-const clients = [
-  "SIEMENS", "FANUC", "ABB", "MITSUBISHI", "BOSCH",
-  "HAAS", "OKUMA", "DMG MORI", "KUKA", "ROCKWELL",
+const stack = [
+  "SIEMENS S7", "ROCKWELL", "ABB 800xA", "SCHNEIDER", "EMERSON DELTAV",
+  "WONDERWARE", "IGNITION", "OPC UA", "MODBUS TCP", "PROFINET",
+  "ETHERNET/IP", "MQTT SPARKPLUG",
 ];
 
 const LogoMarquee = () => {
   return (
-    <section className="border-y border-border/60 py-10 overflow-hidden">
+    <section className="border-y border-border/60 py-10 overflow-hidden bg-surface/30">
       <div className="container mx-auto px-6 lg:px-10 mb-6">
         <p className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-muted-foreground text-center">
-          Certificados y autorizados por
+          // Stack tecnológico certificado
         </p>
       </div>
       <div className="relative">
-        <div className="flex marquee gap-16 whitespace-nowrap">
-          {[...clients, ...clients].map((c, i) => (
+        <div className="flex marquee gap-14 whitespace-nowrap">
+          {[...stack, ...stack].map((c, i) => (
             <span
               key={i}
-              className="font-display text-2xl md:text-3xl tracking-[0.2em] text-muted-foreground/60 hover:text-primary transition-colors"
+              className="font-mono-ed text-base md:text-lg tracking-[0.18em] text-muted-foreground/70 hover:text-primary transition-colors"
             >
               {c}
             </span>

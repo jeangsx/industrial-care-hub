@@ -1,83 +1,98 @@
-import { Wrench, Activity, Cog, ShieldCheck, Cpu, Flame } from "lucide-react";
+import { Cpu, Network, GitBranch, Gauge, ShieldCheck, Workflow } from "lucide-react";
 
 const services = [
   {
     no: "01",
-    icon: Activity,
-    title: "Mantenimiento predictivo",
-    body: "Análisis de vibraciones, termografía y monitoreo de aceites para anticipar fallas antes de que ocurran.",
+    icon: Workflow,
+    title: "Ingeniería de procesos",
+    body: "Diseño, simulación y optimización de procesos continuos y batch. Balance de masa, energía y modelado dinámico.",
+    tag: "PROCESS",
   },
   {
     no: "02",
-    icon: Wrench,
-    title: "Correctivo de emergencia",
-    body: "Cuadrillas 24/7 con stock crítico. Tiempo de respuesta promedio menor a 4 horas en zona metropolitana.",
+    icon: Cpu,
+    title: "Automatización & PLC",
+    body: "Programación PLC/HMI sobre Siemens, Rockwell y Schneider. Control discreto, regulatorio y avanzado APC.",
+    tag: "PLC · DCS",
   },
   {
     no: "03",
-    icon: Cog,
-    title: "Overhaul y reconstrucción",
-    body: "Recuperación integral de equipos al estado original o superior. Garantía escrita de 24 meses.",
+    icon: Network,
+    title: "SCADA & integración",
+    body: "Arquitecturas SCADA multi-planta, historización, OPC UA y bridges a MES/ERP bajo ISA-95.",
+    tag: "SCADA · MES",
   },
   {
     no: "04",
-    icon: Cpu,
-    title: "Retrofit y automatización",
-    body: "Modernización de CNC, PLC y sistemas hidráulicos. Extendemos la vida útil 10–15 años.",
+    icon: Gauge,
+    title: "Instrumentación",
+    body: "Selección, calibración y loop tuning de sensores críticos. Documentación P&ID y loop sheets bajo ISA-5.1.",
+    tag: "INSTRUM.",
   },
   {
     no: "05",
-    icon: ShieldCheck,
-    title: "Auditoría y compliance",
-    body: "Inspecciones bajo norma ISO 55000, OSHA y NOM-029. Reportes ejecutivos para tu dirección.",
+    icon: GitBranch,
+    title: "Industrial IoT & analítica",
+    body: "Edge computing, gemelos digitales y dashboards de telemetría con detección anómala basada en ML.",
+    tag: "IIoT · ML",
   },
   {
     no: "06",
-    icon: Flame,
-    title: "Servicios especializados",
-    body: "Soldadura TIG/MIG, balanceo dinámico, alineación láser y maquinado in situ con tolerancias <0.01 mm.",
+    icon: ShieldCheck,
+    title: "Functional safety",
+    body: "Estudios HAZOP/LOPA, diseño SIS y verificación SIL bajo IEC 61511. Cumplimiento auditado y firmado.",
+    tag: "SIS · SIL",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="servicios" className="py-28 md:py-40 relative">
+    <section id="capacidades" className="py-28 md:py-40 relative">
       <div className="container mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 mb-20">
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="font-mono-ed text-xs text-primary tracking-[0.3em]">— 01 / SERVICIOS</span>
+          <div className="lg:col-span-6">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="font-mono-ed text-[11px] text-primary tracking-[0.3em]">
+                — 01 / CAPACIDADES
+              </span>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05] tracking-tight">
+            <h2 className="text-5xl md:text-6xl leading-[1.05] tracking-tight font-light">
               Seis disciplinas.
               <br />
-              <em className="text-primary not-italic">Una sola</em> obsesión:
+              <span className="text-primary text-glow font-normal">Un solo</span> stack
               <br />
-              que nada se detenga.
+              de control.
             </h2>
           </div>
-          <div className="lg:col-span-6 lg:col-start-7 flex items-end">
+          <div className="lg:col-span-5 lg:col-start-8 flex items-end">
             <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
-              Operamos como una extensión de tu equipo de planta. Cada
-              intervención queda documentada, auditada y respaldada por la
-              firma de un ingeniero certificado.
+              Operamos como una extensión del equipo de ingeniería de planta.
+              Cada loop, cada KPI y cada decisión queda documentada,
+              versionada y respaldada por un ingeniero certificado.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 border border-border">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-md overflow-hidden">
           {services.map((s) => (
             <article
               key={s.no}
-              className="group bg-background p-10 transition-colors duration-500 hover:bg-surface-elevated relative"
+              className="group bg-background p-8 transition-colors duration-500 hover:bg-surface-elevated relative"
             >
-              <div className="flex items-start justify-between mb-12">
-                <s.icon className="size-8 text-primary" strokeWidth={1.4} />
-                <span className="font-mono-ed text-xs text-muted-foreground tracking-[0.3em]">
-                  {s.no}
-                </span>
+              <div className="flex items-start justify-between mb-10">
+                <div className="size-12 rounded-md border border-border bg-surface grid place-items-center group-hover:border-primary/60 group-hover:shadow-glow transition-all">
+                  <s.icon className="size-5 text-primary" strokeWidth={1.6} />
+                </div>
+                <div className="text-right">
+                  <span className="font-mono-ed text-[10px] text-primary tracking-[0.22em] block">
+                    {s.tag}
+                  </span>
+                  <span className="font-mono-ed text-[10px] text-muted-foreground tracking-[0.3em]">
+                    {s.no}
+                  </span>
+                </div>
               </div>
-              <h3 className="font-display text-2xl mb-4 leading-snug group-hover:text-primary transition-colors">
+              <h3 className="text-2xl mb-3 leading-snug font-medium group-hover:text-primary transition-colors">
                 {s.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">{s.body}</p>

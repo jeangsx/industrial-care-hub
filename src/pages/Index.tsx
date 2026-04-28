@@ -1,20 +1,25 @@
 import Navbar from "@/components/site/Navbar";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Services from "@/components/site/Services";
-import Process from "@/components/site/Process";
 import Industries from "@/components/site/Industries";
-import Testimonial from "@/components/site/Testimonial";
 import CTA from "@/components/site/CTA";
 import Plans from "@/components/site/Plans";
+import Autoflame from "@/components/site/Autoflame";
+import WhyUs from "@/components/site/WhyUs";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
+import boilerInterior from "@/assets/ecc-boiler-interior.jpg";
+import welder from "@/assets/ecc-welder.jpg";
+import tubesheet from "@/assets/ecc-tubesheet.jpg";
+import flanges from "@/assets/ecc-flanges.jpg";
+import weldingInside from "@/assets/ecc-welding-inside.jpg";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Axon Systems · Ingeniería Industrial & Sistemas de Control";
+    document.title = "ECC SAC · Soluciones Térmicas Industriales · Calderas y Quemadores";
     const meta = document.querySelector('meta[name="description"]');
     const content =
-      "Ingeniería industrial, automatización, SCADA y telemetría para plantas críticas. Diseño de procesos, PLC/DCS, IIoT y functional safety bajo IEC 61511.";
+      "Energía Combustión Calorífica ECC SAC: mantenimiento, reparación y modernización de calderas, quemadores, calentadores de aceite térmico y hornos. Calor confiable, producción imparable.";
     if (meta) meta.setAttribute("content", content);
     else {
       const m = document.createElement("meta");
@@ -28,76 +33,91 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main className="container mx-auto px-6 lg:px-10 py-24">
-        <section className="max-w-4xl mx-auto mb-16">
-          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
-            Inicio
+        {/* HERO */}
+        <section className="max-w-5xl mx-auto mb-20 text-center">
+          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
+            Energía Combustión Calorífica · ECC SAC
           </span>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-            Soluciones industriales integradas para plantas críticas
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
+            Soluciones térmicas industriales
+            <span className="block text-primary text-glow font-light mt-2">
+              Calor confiable, producción imparable
+            </span>
           </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-            Implementamos control y telemetría con diseño de procesos, automatización y functional safety adaptados a tu operación.
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            Transformamos el calor en productividad. Especialistas en
+            reparación, mantenimiento preventivo y correctivo de calderas,
+            quemadores, calentadores de aceite térmico y hornos.
           </p>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div className="rounded-3xl border border-border/70 bg-surface/80 p-8">
-              <h2 className="text-xl font-semibold mb-3">Control de procesos confiable</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Diseñamos arquitecturas de PLC/DCS con redundancia y seguridad funcional para mantener tus líneas operando sin interrupciones.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-border/70 bg-surface/80 p-8">
-              <h2 className="text-xl font-semibold mb-3">Telemetría en tiempo real</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Conectamos sensores, sistemas y plataformas SCADA para que tus equipos generen datos útiles y decisiones inmediatas.
-              </p>
-            </div>
-          </div>
         </section>
 
-        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-8 mb-20">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-            <div>
+        {/* SOBRE NOSOTROS + GALERÍA */}
+        <section id="sobre-nosotros" className="mb-24">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-stretch">
+            <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12">
               <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
-                Qué hacemos
+                Sobre nosotros
               </span>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-5">
-                Integramos ingeniería, automatización y seguridad operativa
+                Tu socio en seguridad, eficiencia y confiabilidad térmica
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-                Nuestro enfoque une procesos industriales con sistemas de control y una operación segura. Desde la puesta en marcha hasta el soporte durante la vida útil, trabajamos con plantas que no pueden detenerse.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                En Energía Combustión Calorífica ECC SAC transformamos el calor
+                en productividad. Nuestro compromiso es mantener tus procesos
+                funcionando con la máxima seguridad, eficiencia y confiabilidad,
+                ofreciendo soluciones a la medida respaldadas por un equipo
+                técnico altamente capacitado y con amplia experiencia.
               </p>
-              <ul className="grid gap-3 text-sm text-foreground">
-                <li className="rounded-2xl border border-border p-4 bg-background/60">Análisis de procesos y definición de alcance.</li>
-                <li className="rounded-2xl border border-border p-4 bg-background/60">Diseño de arquitecturas de control y comunicación.</li>
-                <li className="rounded-2xl border border-border p-4 bg-background/60">Implementación de SCADA, IIoT y monitoreo remoto.</li>
-              </ul>
-            </div>
-            <div className="rounded-3xl border border-border/70 bg-background/70 p-8">
-              <div className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
-                Impacto en operación
-              </div>
-              <div className="grid gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 {[
-                  { title: "+18%", desc: "Reducción de tiempos de ciclo" },
-                  { title: "99.97%", desc: "Disponibilidad de planta" },
-                  { title: "3x", desc: "Visibilidad de datos de campo" },
+                  { k: "+10", v: "Años de experiencia" },
+                  { k: "6", v: "Sectores industriales" },
+                  { k: "24/7", v: "Atención de emergencias" },
                 ].map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-surface p-5">
-                    <div className="text-4xl font-semibold text-primary">{item.title}</div>
-                    <div className="text-sm text-muted-foreground mt-2">{item.desc}</div>
+                  <div key={item.v} className="rounded-2xl bg-background/60 border border-border p-4">
+                    <div className="text-3xl font-semibold text-primary">{item.k}</div>
+                    <div className="text-xs text-muted-foreground mt-1 font-mono-ed uppercase tracking-wider">
+                      {item.v}
+                    </div>
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="grid grid-cols-2 grid-rows-2 gap-3">
+              <img src={boilerInterior} alt="Interior de caldera industrial pirotubular" className="w-full h-full object-cover rounded-2xl border border-border row-span-2" loading="lazy" />
+              <img src={tubesheet} alt="Detalle de tubos de caldera tras mantenimiento" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
+              <img src={welder} alt="Técnico ECC ejecutando trabajos de soldadura en caldera" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
             </div>
           </div>
         </section>
 
         <LogoMarquee />
         <Services />
-        <Process />
+        <Autoflame />
         <Industries />
         <Plans />
-        <Testimonial />
+        <WhyUs />
+
+        {/* GALERÍA */}
+        <section id="galeria" className="mb-8">
+          <div className="flex items-end justify-between gap-6 mb-8">
+            <div>
+              <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
+                Galería
+              </span>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                Trabajos en campo
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[boilerInterior, welder, weldingInside, flanges, tubesheet, boilerInterior, welder, weldingInside].slice(0, 4).map((img, i) => (
+              <img key={i} src={img} alt={`Trabajo de mantenimiento térmico ECC ${i + 1}`} className="w-full aspect-square object-cover rounded-2xl border border-border hover:opacity-80 transition-opacity" loading="lazy" />
+            ))}
+          </div>
+        </section>
+
         <CTA />
       </main>
       <Footer />

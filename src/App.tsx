@@ -7,7 +7,7 @@ import Index from "./pages/Index.tsx";
 import Capacidades from "./pages/Capacidades.tsx";
 import Stack from "./pages/Stack.tsx";
 import Sectores from "./pages/Sectores.tsx";
-import Caso from "./pages/Caso.tsx";
+import Servicios from "./pages/Servicios.tsx";
 import Contacto from "./pages/Contacto.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -22,9 +22,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/capacidades" element={<Capacidades />} />
+          <Route path="/servicios" element={<Servicios />} />
           <Route path="/stack" element={<Stack />} />
           <Route path="/sectores" element={<Sectores />} />
-          <Route path="/caso" element={<Caso />} />
           <Route path="/contacto" element={<Contacto />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

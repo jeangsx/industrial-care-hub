@@ -1,7 +1,7 @@
 import Navbar from "@/components/site/Navbar";
-import LogoMarquee from "@/components/site/LogoMarquee";
 import Services from "@/components/site/Services";
 import Industries from "@/components/site/Industries";
+import Clientes from "@/components/site/Clientes";
 import CTA from "@/components/site/CTA";
 import Plans from "@/components/site/Plans";
 import Autoflame from "@/components/site/Autoflame";
@@ -92,12 +92,12 @@ const Index = () => {
           </div>
         </section>
 
-        <LogoMarquee />
         <Services />
         <Autoflame />
         <Industries />
         <Plans />
         <WhyUs />
+        <Clientes />
 
         {/* GALERÍA */}
         <section id="galeria" className="mb-8">

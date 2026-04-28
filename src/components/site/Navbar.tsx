@@ -4,9 +4,9 @@ import logoEcc from "@/assets/logo-ecc.png";
 
 const links = [
   { to: "/capacidades", label: "Capacidades" },
+  { to: "/servicios", label: "Servicios" },
   { to: "/stack", label: "Stack" },
   { to: "/sectores", label: "Sectores" },
-  { to: "/caso", label: "Caso" },
   { to: "/contacto", label: "Contacto" },
 ];
 

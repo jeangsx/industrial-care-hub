@@ -17,9 +17,9 @@ const Navbar = () => {
         <NavLink to="/" className="flex items-center gap-3">
           <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-12 w-auto" />
           <div className="leading-tight hidden sm:block">
-            <div className="font-mono-ed text-sm tracking-tight font-semibold">AXON_SYSTEMS</div>
+            <div className="font-mono-ed text-sm tracking-tight font-semibold">ECC</div>
             <div className="font-mono-ed text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              Industrial · Engineering
+              Energía Combustión Calorífica
             </div>
           </div>
         </NavLink>

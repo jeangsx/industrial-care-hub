@@ -1,10 +1,10 @@
 const industries = [
-  { name: "Petroquímica", desc: "Refinería, polímeros y especialidades · DCS DeltaV / 800xA, SIS, APC.", code: "PCH" },
-  { name: "Generación eléctrica", desc: "Térmica, ciclo combinado y renovables · turbina, BoP, control coordinado.", code: "PWR" },
-  { name: "Minería & metales", desc: "Concentradoras, fundición, laminación · MES, dispatch y energy management.", code: "MIN" },
-  { name: "Alimentos & bebidas", desc: "Líneas continuas y batch · S88, CIP, trazabilidad, GMP digital.", code: "F&B" },
-  { name: "Farmacéutica", desc: "Procesos GMP · validación CSV, GAMP-5, audit trail y data integrity ALCOA+.", code: "PHA" },
-  { name: "Agua & utilities", desc: "Plantas potabilizadoras y de tratamiento · telemetría distribuida y IIoT.", code: "WTR" },
+  { name: "Minería", desc: "Calderas y sistemas de vapor para procesos mineros y metalúrgicos.", code: "MIN" },
+  { name: "Pesquera", desc: "Calderas para cocción, esterilizado y plantas de harina de pescado.", code: "PSC" },
+  { name: "Textil", desc: "Vapor para teñido, planchado y procesos de acabado textil.", code: "TXT" },
+  { name: "Agro-industrial", desc: "Calor de proceso para alimentos, lácteos y derivados agrícolas.", code: "AGR" },
+  { name: "Hotelera", desc: "Sistemas de agua caliente sanitaria, lavandería y calefacción.", code: "HTL" },
+  { name: "Comercial", desc: "Soluciones térmicas para hospitales, lavanderías y centros comerciales.", code: "COM" },
 ];
 
 const Industries = () => {
@@ -13,12 +13,12 @@ const Industries = () => {
       <div className="container mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-20">
           <span className="font-mono-ed text-[11px] text-primary tracking-[0.3em] block mb-6">
-            — 03 / SECTORES
+            — 03 / SECTORES ATENDIDOS
           </span>
           <h2 className="text-5xl md:text-6xl leading-[1.05] tracking-tight font-light">
-            Donde la tolerancia
+            Calor confiable,
             <br />
-            al error es <span className="text-primary text-glow font-normal">cero</span>.
+            producción <span className="text-primary text-glow font-normal">imparable</span>.
           </h2>
         </div>
 

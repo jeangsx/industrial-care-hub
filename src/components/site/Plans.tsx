@@ -4,46 +4,44 @@ import { NavLink } from "react-router-dom";
 
 const plans = [
   {
-    code: "PLN_01",
-    name: "Esencial",
-    price: "Desde $1.2k",
-    period: "/ mes",
-    tagline: "Monitoreo y soporte preventivo para plantas pequeñas.",
+    code: "PLN_T",
+    name: "Trimestral",
+    period: "/ cada 3 meses",
+    tagline: "Ideal para plantas con operación continua que requieren control frecuente.",
     features: [
-      "Inspección mensual de equipos críticos",
-      "Telemetría básica (hasta 50 tags)",
-      "Reportes de salud operacional",
-      "Soporte remoto en horario laboral",
+      "Inspección y limpieza de caldera",
+      "Revisión del tren de combustión",
+      "Análisis y regulación de combustión",
+      "Reporte técnico con fotografías",
+      "Atención prioritaria ante emergencias",
     ],
     featured: false,
   },
   {
-    code: "PLN_02",
-    name: "Industrial",
-    price: "Desde $3.8k",
-    period: "/ mes",
-    tagline: "Operación continua con SCADA y mantenimiento predictivo.",
+    code: "PLN_S",
+    name: "Semestral",
+    period: "/ cada 6 meses",
+    tagline: "Equilibrio entre cobertura y costo para industrias de mediana exigencia.",
     features: [
-      "SCADA dedicado + dashboards a medida",
-      "Mantenimiento predictivo con IIoT",
-      "Soporte 24/7 con SLA < 4h",
-      "Integraciones PLC/DCS multi-marca",
-      "Auditoría trimestral ISA-95",
+      "Mantenimiento integral de caldera y quemador",
+      "Calibración de instrumentos y controles",
+      "Revisión de sistema de alimentación de agua",
+      "Pruebas de seguridad y eficiencia",
+      "Asesoría técnica y soporte remoto",
     ],
     featured: true,
   },
   {
-    code: "PLN_03",
-    name: "Mission Critical",
-    price: "Custom",
-    period: "",
-    tagline: "Functional safety y arquitectura redundante para plantas que no se detienen.",
+    code: "PLN_A",
+    name: "Anual",
+    period: "/ cada 12 meses",
+    tagline: "Plan completo para plantas con operación estable que buscan confiabilidad.",
     features: [
-      "Diseño SIS bajo IEC 61511",
-      "Redundancia hot-standby end-to-end",
-      "Ingeniero residente on-site",
-      "Hardening ciberseguridad OT (IEC 62443)",
-      "Roadmap de modernización a 36 meses",
+      "Mantenimiento integral end-to-end",
+      "Ensayo hidrostático de recipientes a presión",
+      "Revisión refractaria y aislamiento térmico",
+      "Diagnóstico de eficiencia energética",
+      "Garantía extendida sobre intervenciones",
     ],
     featured: false,
   },
@@ -55,15 +53,18 @@ const Plans = () => {
       <div className="flex items-end justify-between gap-6 mb-10">
         <div>
           <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
-            Planes · Tier
+            Planes de Mantenimiento · ECC
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Elige el nivel de operación que tu planta necesita
+            Elige la frecuencia que tu caldera necesita
           </h2>
+          <p className="text-muted-foreground mt-3 max-w-2xl text-sm md:text-base">
+            Programas diseñados para mantener tus equipos térmicos operando con la máxima seguridad, eficiencia y confiabilidad.
+          </p>
         </div>
         <div className="hidden md:flex items-center gap-2 font-mono-ed text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
           <span className="size-1.5 rounded-full bg-primary animate-blink" />
-          PRICING · USD / MES
+          ECC SAC · MAINTENANCE TIERS
         </div>
       </div>
 
@@ -79,7 +80,7 @@ const Plans = () => {
           >
             {p.featured && (
               <div className="absolute -top-3 left-8 font-mono-ed text-[10px] uppercase tracking-[0.3em] bg-primary text-primary-foreground px-3 py-1 rounded-full">
-                Recomendado
+                Más solicitado
               </div>
             )}
 
@@ -92,8 +93,8 @@ const Plans = () => {
             </p>
 
             <div className="flex items-baseline gap-1 mb-6">
-              <span className="text-4xl font-semibold text-foreground">{p.price}</span>
-              <span className="font-mono-ed text-xs text-muted-foreground">{p.period}</span>
+              <span className="text-3xl font-semibold text-foreground">Cotización</span>
+              <span className="font-mono-ed text-xs text-muted-foreground ml-1">{p.period}</span>
             </div>
 
             <div className="divider-rule mb-6" />
@@ -112,7 +113,7 @@ const Plans = () => {
               className="w-full"
               asChild
             >
-              <NavLink to="/contacto">Solicitar propuesta</NavLink>
+              <NavLink to="/contacto">Solicitar cotización</NavLink>
             </Button>
           </div>
         ))}

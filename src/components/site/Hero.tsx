@@ -29,32 +29,32 @@ const Hero = () => {
             <div className="flex items-center gap-3 mb-8">
               <span className="size-1.5 rounded-full bg-primary animate-blink" />
               <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary">
-                v.4.2 · Operating across 38 plants
+                ECC SAC · +10 años en soluciones térmicas
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] leading-[0.95] tracking-tight text-balance mb-10 font-light">
-              Autonomous
+              Soluciones
               <br />
-              <span className="text-primary text-glow font-normal">flow control</span>
+              <span className="text-primary text-glow font-normal">térmicas</span>
               <br />
-              for heavy industry.
+              industriales.
             </h1>
 
             <p className="max-w-xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-12">
-              Sincronizamos throughput industrial con telemetría de precisión
-              milimétrica. Ingeniería de procesos, automatización y sistemas
-              SCADA para plantas que no pueden detenerse.
+              Calor confiable, producción imparable. Reparación, mantenimiento
+              y modernización de calderas, quemadores, calentadores de aceite
+              térmico y hornos para industrias que no pueden detenerse.
             </p>
 
             <div className="flex flex-wrap items-center gap-5">
               <Button variant="hero" size="xl" asChild>
                 <a href="#contacto">
-                  Iniciar secuencia <ArrowRight className="size-4" />
+                  Solicitar servicio <ArrowRight className="size-4" />
                 </a>
               </Button>
               <Button variant="ghostLine" size="lg" asChild>
-                <a href="#stack">Ver schematic</a>
+                <a href="#planes">Ver planes</a>
               </Button>
             </div>
           </div>
@@ -65,29 +65,29 @@ const Hero = () => {
               <div className="flex items-center justify-between mb-5 font-mono-ed text-[11px] uppercase tracking-[0.22em]">
                 <div className="flex items-center gap-2 text-primary">
                   <span className="size-1.5 rounded-full bg-primary animate-blink" />
-                  Live · Plant 04
+                  Caldera · Línea 02
                 </div>
-                <span className="text-muted-foreground">14:38:02 UTC</span>
+                <span className="text-muted-foreground">Tiempo real</span>
               </div>
 
               {/* Load bar */}
               <div className="mb-6">
                 <div className="flex justify-between font-mono-ed text-xs mb-2">
-                  <span className="text-muted-foreground uppercase tracking-[0.2em]">System load</span>
-                  <span className="text-primary tabular-nums">64.2%</span>
+                  <span className="text-muted-foreground uppercase tracking-[0.2em]">Eficiencia</span>
+                  <span className="text-primary tabular-nums">92.4%</span>
                 </div>
                 <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-                  <div className="w-[64%] h-full bg-primary shadow-glow" />
+                  <div className="w-[92%] h-full bg-primary shadow-glow" />
                 </div>
               </div>
 
               {/* Telemetry grid */}
               <div className="grid grid-cols-2 gap-3 mb-5">
                 {[
-                  { l: "Pressure", v: "442.8", u: "BAR" },
-                  { l: "Temp", v: "84.1", u: "°C" },
-                  { l: "Throughput", v: "1.24k", u: "T/H" },
-                  { l: "Vibration", v: "0.18", u: "mm/s" },
+                  { l: "Presión", v: "8.4", u: "BAR" },
+                  { l: "Temp", v: "175", u: "°C" },
+                  { l: "Vapor", v: "1.2k", u: "kg/h" },
+                  { l: "O₂", v: "3.1", u: "%" },
                 ].map((m) => (
                   <div key={m.l} className="bg-background/60 border border-border rounded-md p-3">
                     <div className="font-mono-ed text-[10px] uppercase tracking-[0.22em] text-muted-foreground mb-1">
@@ -105,9 +105,9 @@ const Hero = () => {
               <div className="flex items-center justify-between font-mono-ed text-[10px] uppercase tracking-[0.22em] pt-4 border-t border-border">
                 <div className="flex items-center gap-2 text-primary">
                   <span className="size-1 rounded-full bg-primary" />
-                  Nominal
+                  Operación nominal
                 </div>
-                <span className="text-muted-foreground">2,841 sensors · 0 alerts</span>
+                <span className="text-muted-foreground">Autoflame MK8 · 0 alertas</span>
               </div>
             </div>
           </div>
@@ -116,10 +116,10 @@ const Hero = () => {
         {/* Stat strip */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border rounded-md overflow-hidden">
           {[
-            { k: "14.2", u: "ms", v: "Signal latency" },
-            { k: "99.98", u: "%", v: "Uptime integrity" },
-            { k: "2,841", u: "", v: "Active sensors" },
-            { k: "24/7", u: "", v: "Ops response" },
+            { k: "+10", u: "años", v: "De experiencia" },
+            { k: "6", u: "", v: "Sectores atendidos" },
+            { k: "24/7", u: "", v: "Respuesta a emergencias" },
+            { k: "100%", u: "", v: "Personal certificado" },
           ].map((s) => (
             <div key={s.v} className="bg-background/80 backdrop-blur-sm px-6 py-7">
               <div className="font-mono-ed text-3xl md:text-4xl text-primary tabular-nums leading-none font-semibold">

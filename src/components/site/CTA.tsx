@@ -21,7 +21,7 @@ const CTA = () => {
       <div className="container mx-auto px-6 lg:px-10 relative">
         <div className="max-w-4xl">
           <span className="font-mono-ed text-[11px] text-primary tracking-[0.3em] block mb-8">
-            — 05 / INITIATE_SEQUENCE
+            — 05 / CONTACTO
           </span>
           <h2 className="text-5xl md:text-7xl lg:text-[6rem] leading-[0.95] tracking-tight mb-10 text-balance font-light">
             Hablemos antes
@@ -29,27 +29,27 @@ const CTA = () => {
             de la próxima <span className="text-primary text-glow font-normal">parada</span>.
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-12">
-            Diagnóstico técnico sin costo en planta. Te entregamos una
-            propuesta de arquitectura de control con cronograma, KPIs y ROI
-            proyectado en menos de 7 días hábiles.
+            Solicita una visita técnica a tu planta. Evaluamos tus equipos
+            térmicos y te entregamos una propuesta de mantenimiento o
+            modernización con cronograma claro.
           </p>
 
           <div className="flex flex-wrap items-center gap-5 mb-16">
             <Button variant="hero" size="xl" asChild>
-              <a href="mailto:ops@axonsystems.io">
-                Solicitar diagnóstico <ArrowUpRight className="size-4" />
+              <a href="mailto:ericksoria@calderas-ecc.com">
+                Solicitar visita técnica <ArrowUpRight className="size-4" />
               </a>
             </Button>
             <Button variant="ghostLine" size="lg" asChild>
-              <a href="tel:+5215555000000">+52 55 5500 0000</a>
+              <a href="tel:+51972316786">+51 972 316 786</a>
             </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border rounded-md overflow-hidden max-w-3xl">
             {[
-              { l: "// HQ", v: "Av. Industria 1287, CDMX" },
-              { l: "// 24/7 OPS", v: "ops@axonsystems.io" },
-              { l: "// COMERCIAL", v: "Lun – Vie · 8:00 a 18:00" },
+              { l: "// SEDE", v: "Av. Metropolitana Mz G1 Lt 43, Ate – Lima" },
+              { l: "// EMAIL", v: "ericksoria@calderas-ecc.com" },
+              { l: "// TELÉFONOS", v: "+51 972 316 786 · +51 938 154 638" },
             ].map((b) => (
               <div key={b.l} className="bg-background/80 backdrop-blur-sm p-6">
                 <div className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-3">

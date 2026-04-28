@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
+import logoEcc from "@/assets/logo-ecc.png";
 
 const links = [
   { to: "/capacidades", label: "Capacidades" },
@@ -14,7 +15,7 @@ const Navbar = () => {
     <header className="sticky top-0 left-0 right-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-sm">
       <div className="container mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Logo ECC" className="h-12 w-auto" />
+          <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-12 w-auto" />
           <div className="leading-tight hidden sm:block">
             <div className="font-mono-ed text-sm tracking-tight font-semibold">AXON_SYSTEMS</div>
             <div className="font-mono-ed text-[10px] uppercase tracking-[0.25em] text-muted-foreground">

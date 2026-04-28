@@ -1,47 +1,61 @@
-import { Cpu, Network, GitBranch, Gauge, ShieldCheck, Workflow } from "lucide-react";
+import { Flame, Wrench, Settings, Zap, Droplets, Gauge, Cog, ShieldCheck } from "lucide-react";
 
 const services = [
   {
     no: "01",
-    icon: Workflow,
-    title: "Ingeniería de procesos",
-    body: "Diseño, simulación y optimización de procesos continuos y batch. Balance de masa, energía y modelado dinámico.",
-    tag: "PROCESS",
+    icon: Wrench,
+    title: "Mantenimiento integral de calderas",
+    body: "Inspección, limpieza, cambio de tubos y puesta a punto de calderas pirotubulares y acuotubulares.",
+    tag: "CALDERAS",
   },
   {
     no: "02",
-    icon: Cpu,
-    title: "Automatización & PLC",
-    body: "Programación PLC/HMI sobre Siemens, Rockwell y Schneider. Control discreto, regulatorio y avanzado APC.",
-    tag: "PLC · DCS",
+    icon: Flame,
+    title: "Mantenimiento de quemadores",
+    body: "Servicio integral en quemadores, tren de combustión, y regulación con análisis de gases.",
+    tag: "QUEMADORES",
   },
   {
     no: "03",
-    icon: Network,
-    title: "SCADA & integración",
-    body: "Arquitecturas SCADA multi-planta, historización, OPC UA y bridges a MES/ERP bajo ISA-95.",
-    tag: "SCADA · MES",
+    icon: Settings,
+    title: "Conversión a gas o dual",
+    body: "Conversión de quemadores a Gas Natural, GLP o sistemas duales con ingeniería certificada.",
+    tag: "CONVERSIÓN",
   },
   {
     no: "04",
-    icon: Gauge,
-    title: "Instrumentación",
-    body: "Selección, calibración y loop tuning de sensores críticos. Documentación P&ID y loop sheets bajo ISA-5.1.",
-    tag: "INSTRUM.",
+    icon: Zap,
+    title: "Tableros eléctricos & motores",
+    body: "Fabricación de tableros nuevos, mejoramiento de existentes y mantenimiento de motores eléctricos.",
+    tag: "ELÉCTRICO",
   },
   {
     no: "05",
-    icon: GitBranch,
-    title: "Industrial IoT & analítica",
-    body: "Edge computing, gemelos digitales y dashboards de telemetría con detección anómala basada en ML.",
-    tag: "IIoT · ML",
+    icon: Droplets,
+    title: "Redes de vapor y agua",
+    body: "Instalación de redes de vapor y condensado, sistemas de ablandamiento y alimentación a presión constante.",
+    tag: "VAPOR · AGUA",
   },
   {
     no: "06",
+    icon: Cog,
+    title: "Refractario & aislamiento",
+    body: "Reparación o fabricación de tapas, conos, tapones y forrado con aislamiento térmico de alto rendimiento.",
+    tag: "REFRACTARIO",
+  },
+  {
+    no: "07",
+    icon: Gauge,
+    title: "Ensayo hidrostático",
+    body: "Pruebas de presión hidrostática certificadas para recipientes a presión y validación de integridad.",
+    tag: "TESTING",
+  },
+  {
+    no: "08",
     icon: ShieldCheck,
-    title: "Functional safety",
-    body: "Estudios HAZOP/LOPA, diseño SIS y verificación SIL bajo IEC 61511. Cumplimiento auditado y firmado.",
-    tag: "SIS · SIL",
+    title: "Fabricación de repuestos",
+    body: "Fabricación de difusores y repuestos a medida con materiales originales y entrega oportuna.",
+    tag: "REPUESTOS",
   },
 ];
 
@@ -53,27 +67,25 @@ const Services = () => {
           <div className="lg:col-span-6">
             <div className="flex items-center gap-3 mb-6">
               <span className="font-mono-ed text-[11px] text-primary tracking-[0.3em]">
-                — 01 / CAPACIDADES
+                — 01 / SERVICIOS ECC
               </span>
             </div>
             <h2 className="text-5xl md:text-6xl leading-[1.05] tracking-tight font-light">
-              Seis disciplinas.
+              Trabajos que mantienen
               <br />
-              <span className="text-primary text-glow font-normal">Un solo</span> stack
-              <br />
-              de control.
+              <span className="text-primary text-glow font-normal">viva</span> tu industria.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:col-start-8 flex items-end">
             <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
-              Operamos como una extensión del equipo de ingeniería de planta.
-              Cada loop, cada KPI y cada decisión queda documentada,
-              versionada y respaldada por un ingeniero certificado.
+              Especialistas en mantener, optimizar y modernizar tus sistemas térmicos.
+              Personal altamente capacitado y equipos de última tecnología,
+              con respuesta inmediata para reducir paradas no planificadas.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-md overflow-hidden">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-md overflow-hidden">
           {services.map((s) => (
             <article
               key={s.no}
@@ -92,7 +104,7 @@ const Services = () => {
                   </span>
                 </div>
               </div>
-              <h3 className="text-2xl mb-3 leading-snug font-medium group-hover:text-primary transition-colors">
+              <h3 className="text-xl mb-3 leading-snug font-medium group-hover:text-primary transition-colors">
                 {s.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">{s.body}</p>

@@ -5,6 +5,7 @@ import Process from "@/components/site/Process";
 import Industries from "@/components/site/Industries";
 import Testimonial from "@/components/site/Testimonial";
 import CTA from "@/components/site/CTA";
+import Plans from "@/components/site/Plans";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
 
@@ -95,6 +96,7 @@ const Index = () => {
         <Services />
         <Process />
         <Industries />
+        <Plans />
         <Testimonial />
         <CTA />
       </main>

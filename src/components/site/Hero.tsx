@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="flex items-center gap-3 mb-8">
               <span className="size-1.5 rounded-full bg-primary animate-blink" />
               <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary">
-                ECC SAC · +5 años en soluciones térmicas
+                ECC SAC · +7 años en soluciones térmicas
               </span>
             </div>
 

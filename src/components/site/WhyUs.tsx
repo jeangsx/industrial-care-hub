@@ -4,7 +4,7 @@ const reasons = [
   {
     icon: Award,
     title: "Experiencia y especialización",
-    body: "Más de 10 años brindando soluciones térmicas a industrias de alto rendimiento, con un equipo técnico altamente capacitado.",
+    body: "Más de 7 años brindando soluciones térmicas a industrias de alto rendimiento, con un equipo técnico altamente capacitado.",
   },
   {
     icon: Zap,

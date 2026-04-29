@@ -1,42 +1,42 @@
 import { useEffect } from "react";
-import Navbar from "@/components/site/Navbar";
+import VolcanicHeader from "@/components/site/VolcanicHeader";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Footer from "@/components/site/Footer";
 
 const Stack = () => {
   useEffect(() => {
-    document.title = "Stack · Axon Systems";
+    document.title = "Stack técnico · ECC SAC · Combustión y Control";
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main className="container mx-auto px-6 lg:px-10 py-24">
-        <section className="max-w-4xl mx-auto mb-16">
-          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
-            Stack tecnológico
-          </span>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-            Nuestra columna vertebral de automatización
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-            Tecnologías y protocolos industriales certificados para integración de plantas, comunicaciones de campo y control distribuido en tiempo real.
-          </p>
-        </section>
+      <VolcanicHeader
+        eyebrow="Stack técnico · ECC SAC"
+        title={
+          <>
+            Tecnología de combustión
+            <span className="block text-primary text-glow font-light mt-2">
+              de clase industrial
+            </span>
+          </>
+        }
+        description="Trabajamos con marcas líderes en quemadores, controladores de combustión, sensores y sistemas de gestión de calderas para garantizar eficiencia y seguridad en sala de máquinas."
+      />
 
+      <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="grid gap-8 lg:grid-cols-3 mb-20">
           {[
             {
-              title: "Protocolos industriales",
-              description: "OPC UA, Modbus TCP, PROFINET, Ethernet/IP y MQTT para conectar sistemas legacy y modernos.",
+              title: "Controladores de combustión",
+              description: "Autoflame MK8 y MK9, Honeywell y Siemens LMV para control servomotorizado y trim de O₂.",
             },
             {
-              title: "Sistemas de control",
-              description: "Integración con Siemens, Rockwell, ABB, Schneider y Emerson para máxima interoperabilidad.",
+              title: "Quemadores industriales",
+              description: "Weishaupt, Riello, Baltur y Bentone — mantenimiento, repuestos y conversión a gas natural o dual.",
             },
             {
-              title: "Plataformas SCADA",
-              description: "Visualización y control con Ignition, Wonderware y soluciones certificadas de monitoreo remoto.",
+              title: "Calderas y aceite térmico",
+              description: "Cleaver-Brooks, Continental, Distral, Babcock — repuestos, refractarios, tubos y accesorios de seguridad.",
             },
           ].map((item) => (
             <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8">
@@ -50,23 +50,23 @@ const Stack = () => {
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
-                Integración escalable
+                Integración total
               </div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-5">
-                Stack pensado para disponibilidad y evolución continua
+                De la combustión al monitoreo de planta
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-                Elegimos tecnologías que permiten crecer sin rehacer la planta. Nuestro stack combina sistemas robustos de control con conectividad segura y datos accesibles en la nube o en sitio.
+                Combinamos quemadores, controles Autoflame y tableros eléctricos propios para entregarte una sala de calderas confiable, monitoreable y eficiente.
               </p>
             </div>
             <div className="grid gap-4">
               <div className="rounded-3xl bg-background/70 p-6 border border-border">
-                <div className="text-4xl font-semibold text-primary">3x</div>
-                <div className="text-sm text-muted-foreground mt-2">Mayor disponibilidad de datos operativos.</div>
+                <div className="text-4xl font-semibold text-primary">+8%</div>
+                <div className="text-sm text-muted-foreground mt-2">Ahorro promedio de combustible con trim de O₂.</div>
               </div>
               <div className="rounded-3xl bg-background/70 p-6 border border-border">
-                <div className="text-4xl font-semibold text-primary">99.98%</div>
-                <div className="text-sm text-muted-foreground mt-2">Conectividad entre controladores y SCADA.</div>
+                <div className="text-4xl font-semibold text-primary">MK8 / MK9</div>
+                <div className="text-sm text-muted-foreground mt-2">Especialistas certificados Autoflame.</div>
               </div>
             </div>
           </div>

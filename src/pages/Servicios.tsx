@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "@/components/site/Navbar";
+import VolcanicHeader from "@/components/site/VolcanicHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -11,25 +11,26 @@ const Servicios = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Servicios · Axon Systems";
+    document.title = "Servicios · ECC SAC · Calderas, Quemadores y Vapor";
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main className="container mx-auto px-6 lg:px-10 py-24">
+      <VolcanicHeader
+        eyebrow="Servicios térmicos premium · ECC SAC"
+        title={
+          <>
+            Tus calderas y quemadores
+            <span className="block text-primary text-glow font-light mt-2">
+              siempre al máximo
+            </span>
+          </>
+        }
+        description="Mantenimiento, modernización y fabricación de repuestos con ritmo industrial, alta respuesta y control total de tu sala de calderas."
+      />
+      <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="max-w-5xl mx-auto mb-16 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-[11px] uppercase tracking-[0.3em] text-primary shadow-glow animate-glow mb-6">
-            SERVICIOS TÉRMICOS PREMIUM
-          </span>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6 animate-fade-up">
-            Hacemos que tus calderas, quemadores y sistemas de vapor funcionen siempre al máximo.
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: "80ms" }}>
-            Mantenimiento, modernización y fabricación de repuestos con ritmo industrial, alta respuesta y control total de tu operación.
-          </p>
-
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
                 <Button variant="hero" size="xl" className="min-w-[200px]">

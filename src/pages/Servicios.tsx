@@ -18,6 +18,7 @@ const Servicios = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <VolcanicHeader
+        backgroundImage={volcanicBg}
         eyebrow="Servicios térmicos premium · ECC SAC"
         title={
           <>

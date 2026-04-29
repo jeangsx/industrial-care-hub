@@ -1,42 +1,42 @@
 import { useEffect } from "react";
-import Navbar from "@/components/site/Navbar";
+import VolcanicHeader from "@/components/site/VolcanicHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
 
 const Contacto = () => {
   useEffect(() => {
-    document.title = "Contacto · Axon Systems";
+    document.title = "Contacto · ECC SAC · Servicio de Calderas";
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main className="container mx-auto px-6 lg:px-10 py-24">
-        <section className="max-w-4xl mx-auto mb-16">
-          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
-            Contacto
-          </span>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-            Hablemos del próximo proyecto de planta
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-            Nuestro equipo coordina diagnósticos, propuestas técnicas y soporte operativo para que tu planta integre control y datos sin fricción.
-          </p>
-        </section>
+      <VolcanicHeader
+        eyebrow="Contacto · ECC SAC"
+        title={
+          <>
+            Hablemos de tu
+            <span className="block text-primary text-glow font-light mt-2">
+              sala de calderas
+            </span>
+          </>
+        }
+        description="Coordinamos visitas técnicas, diagnósticos y propuestas de mantenimiento para calderas, quemadores y sistemas de combustión. Respuesta rápida y soporte 24/7 en emergencias."
+      />
 
+      <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="grid gap-8 lg:grid-cols-3 mb-20">
           {[
             {
-              title: "Diagnóstico sin costo",
-              desc: "Evaluamos tu planta con prioridad en seguridad, continuidad y oportunidad de mejora productiva.",
+              title: "Visita técnica sin costo",
+              desc: "Evaluamos tu sala de calderas, revisamos eficiencia, seguridad y oportunidades de modernización.",
             },
             {
               title: "Propuesta técnica clara",
-              desc: "Entregamos alcances, cronogramas y métricas de retorno para tomar decisiones seguras.",
+              desc: "Recibe alcance, cronograma y costos detallados para mantenimiento, repuestos o conversión de quemadores.",
             },
             {
-              title: "Soporte operativo",
-              desc: "Acompañamos la implementación con pruebas, capacitación y transferencia de know‑how.",
+              title: "Atención 24/7",
+              desc: "Acompañamos paradas programadas y respondemos emergencias para que tu producción no se detenga.",
             },
           ].map((item) => (
             <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8">
@@ -56,21 +56,21 @@ const Contacto = () => {
                 Oficina
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Av. Industria 1287, Ciudad de México
+                Lima, Perú
               </p>
               <p className="text-sm font-semibold">Horario</p>
-              <p className="text-sm text-muted-foreground">Lun – Vie · 8:00 a 18:00</p>
+              <p className="text-sm text-muted-foreground">Lun – Sáb · 8:00 a 18:00 · Emergencias 24/7</p>
             </div>
             <div className="rounded-3xl border border-border p-8 bg-background/70">
               <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
                 Contacto directo
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                ops@axonsystems.io<br />
-                +52 55 5500 0000
+                Erick Soria · Gerente Técnico<br />
+                +51 941 388 698
               </p>
-              <p className="text-sm font-semibold">Solicitud de diagnóstico</p>
-              <p className="text-sm text-muted-foreground">Envíanos tus datos y te devolvemos un plan técnico en 5 días hábiles.</p>
+              <p className="text-sm font-semibold">Solicitud de visita técnica</p>
+              <p className="text-sm text-muted-foreground">Escríbenos por WhatsApp y coordinamos visita en menos de 48 horas.</p>
             </div>
           </div>
         </section>

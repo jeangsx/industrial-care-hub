@@ -1,54 +1,54 @@
 import { useEffect } from "react";
-import Navbar from "@/components/site/Navbar";
+import VolcanicHeader from "@/components/site/VolcanicHeader";
 import Industries from "@/components/site/Industries";
 import Footer from "@/components/site/Footer";
 
 const Sectores = () => {
   useEffect(() => {
-    document.title = "Sectores · Axon Systems";
+    document.title = "Sectores · ECC SAC · Soluciones Térmicas";
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main className="container mx-auto px-6 lg:px-10 py-24">
-        <section className="max-w-4xl mx-auto mb-16">
-          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
-            Sectores
-          </span>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-            Soluciones hechas para tu industria
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
-            Aplicamos experiencia en refinerías, plantas químicas, alimentación, energía y servicios para integrar control, seguridad y datos sin interrupciones.
-          </p>
-        </section>
+      <VolcanicHeader
+        eyebrow="Sectores · ECC SAC"
+        title={
+          <>
+            Calor confiable para
+            <span className="block text-primary text-glow font-light mt-2">
+              cada industria
+            </span>
+          </>
+        }
+        description="Damos servicio a salas de calderas y sistemas de combustión en minería, pesca, textil, agroindustria, hotelería y comercio. Cada sector exige una respuesta técnica diferente — y la tenemos."
+      />
 
+      <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 mb-20">
           {[
             {
-              title: "Refinerías",
-              desc: "Automatización de procesos de carga, destilación y control de calidad con monitoreo continuo.",
-            },
-            {
-              title: "Plantas químicas",
-              desc: "Gestión segura de reactores, bombas y válvulas con SCADA y seguridad funcional.",
-            },
-            {
-              title: "Energía y utilities",
-              desc: "Integración de sistemas de generación, tratamiento de agua y distribución eléctrica.",
-            },
-            {
-              title: "Alimentos y bebidas",
-              desc: "Control higiénico de procesos y trazabilidad de lotes con visualización en tiempo real.",
-            },
-            {
               title: "Minería",
-              desc: "Monitorización de flotas, carga de chancadores y automatización de sistemas críticos.",
+              desc: "Calderas y calentadores de aceite térmico para procesos de lixiviación, secado y campamentos en altura.",
             },
             {
-              title: "Infraestructura",
-              desc: "Control de servicios críticos y supervisión remota en instalaciones de gran escala.",
+              title: "Pesca e industria conservera",
+              desc: "Generación de vapor para cocción, esterilización y limpieza CIP con altos estándares sanitarios.",
+            },
+            {
+              title: "Textil",
+              desc: "Vapor estable para teñido, planchado y acabado, con eficiencia energética y bajo nivel de emisiones.",
+            },
+            {
+              title: "Agroindustria",
+              desc: "Calor de proceso para extracción, secado y producción alimentaria con trazabilidad y continuidad.",
+            },
+            {
+              title: "Hotelería y salud",
+              desc: "Calderas para agua caliente sanitaria, lavandería y climatización con mantenimiento programado.",
+            },
+            {
+              title: "Comercial e industrial",
+              desc: "Servicio integral a plantas comerciales, lavanderías industriales y centros logísticos con vapor.",
             },
           ].map((item) => (
             <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8">
@@ -62,23 +62,23 @@ const Sectores = () => {
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
-                Adaptación sectorial
+                Especialización por sector
               </div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-5">
-                Respuesta específica para cada operación
+                Servicio térmico que entiende tu proceso
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-                Diseñamos soluciones que respetan tus procesos y normativas propias de la industria. La implementación considera integridad, seguridad y continuidad de servicio.
+                Adaptamos planes de mantenimiento, repuestos y modernizaciones a la criticidad de cada industria, respetando normativas locales y de operación segura.
               </p>
             </div>
             <div className="grid gap-4">
               <div className="rounded-3xl bg-background/70 p-6 border border-border">
-                <div className="text-4xl font-semibold text-primary">12+</div>
-                <div className="text-sm text-muted-foreground mt-2">sectores con proyectos entregados.</div>
+                <div className="text-4xl font-semibold text-primary">6+</div>
+                <div className="text-sm text-muted-foreground mt-2">Sectores industriales atendidos en Perú.</div>
               </div>
               <div className="rounded-3xl bg-background/70 p-6 border border-border">
-                <div className="text-4xl font-semibold text-primary">4.8/5</div>
-                <div className="text-sm text-muted-foreground mt-2">valoración de clientes en respuesta técnica.</div>
+                <div className="text-4xl font-semibold text-primary">24/7</div>
+                <div className="text-sm text-muted-foreground mt-2">Atención de emergencias en sala de calderas.</div>
               </div>
             </div>
           </div>

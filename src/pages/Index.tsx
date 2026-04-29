@@ -1,5 +1,6 @@
 import Navbar from "@/components/site/Navbar";
 import Services from "@/components/site/Services";
+import volcanicBg from "@/assets/volcanic-bg.jpg";
 import Industries from "@/components/site/Industries";
 import Clientes from "@/components/site/Clientes";
 import CTA from "@/components/site/CTA";
@@ -31,10 +32,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main className="container mx-auto px-6 lg:px-10 py-24">
-        {/* HERO */}
-        <section className="max-w-5xl mx-auto mb-20 text-center">
+      {/* Volcanic backdrop covering navbar + hero */}
+      <div className="relative">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <img
+            src={volcanicBg}
+            alt="Fondo de roca volcánica con vetas de lava incandescente"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+          />
+          {/* Tints: keep brand dark + readability */}
+          <div className="absolute inset-0 bg-background/55" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+          <div className="absolute inset-0 gradient-radial opacity-40 mix-blend-screen" />
+        </div>
+
+        <Navbar />
+        <section className="container mx-auto px-6 lg:px-10 pt-24 pb-28 max-w-5xl text-center">
           <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
             Energía Combustión Calorífica · ECC SAC
           </span>
@@ -50,6 +65,9 @@ const Index = () => {
             quemadores, calentadores de aceite térmico y hornos.
           </p>
         </section>
+      </div>
+
+      <main className="container mx-auto px-6 lg:px-10 pb-24">
 
         {/* SOBRE NOSOTROS + GALERÍA */}
         <section id="sobre-nosotros" className="mb-24">

@@ -12,7 +12,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-sm">
+    <header className="sticky top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/30 backdrop-blur-md">
       <div className="container mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-3">
           <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-12 w-auto" />

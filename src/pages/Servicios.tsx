@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import VolcanicHeader from "@/components/site/VolcanicHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
+import volcanicBg from "@/assets/volcanic-bg-servicios.jpg";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

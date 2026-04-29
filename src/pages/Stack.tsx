@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import VolcanicHeader from "@/components/site/VolcanicHeader";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Footer from "@/components/site/Footer";
+import volcanicBg from "@/assets/volcanic-bg-stack.jpg";
 
 const Stack = () => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const Stack = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <VolcanicHeader
+        backgroundImage={volcanicBg}
         eyebrow="Stack técnico · ECC SAC"
         title={
           <>

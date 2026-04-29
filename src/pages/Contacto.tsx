@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import VolcanicHeader from "@/components/site/VolcanicHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
+import volcanicBg from "@/assets/volcanic-bg-contacto.jpg";
 
 const Contacto = () => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const Contacto = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <VolcanicHeader
+        backgroundImage={volcanicBg}
         eyebrow="Contacto · ECC SAC"
         title={
           <>

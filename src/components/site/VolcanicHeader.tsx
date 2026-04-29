@@ -1,20 +1,21 @@
 import { ReactNode } from "react";
 import Navbar from "@/components/site/Navbar";
-import volcanicBg from "@/assets/volcanic-bg.jpg";
+import defaultVolcanicBg from "@/assets/volcanic-bg.jpg";
 
 interface VolcanicHeaderProps {
   eyebrow: string;
   title: ReactNode;
   description: string;
   children?: ReactNode;
+  backgroundImage?: string;
 }
 
-const VolcanicHeader = ({ eyebrow, title, description, children }: VolcanicHeaderProps) => {
+const VolcanicHeader = ({ eyebrow, title, description, children, backgroundImage }: VolcanicHeaderProps) => {
   return (
     <div className="relative isolate">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src={volcanicBg}
+          src={backgroundImage ?? defaultVolcanicBg}
           alt="Fondo de roca volcánica con vetas de lava incandescente"
           className="w-full h-full object-cover"
           width={1920}

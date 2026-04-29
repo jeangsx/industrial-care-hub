@@ -33,8 +33,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Volcanic backdrop covering navbar + hero */}
-      <div className="relative">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="relative isolate">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
             src={volcanicBg}
             alt="Fondo de roca volcánica con vetas de lava incandescente"
@@ -43,28 +43,30 @@ const Index = () => {
             height={1080}
           />
           {/* Tints: keep brand dark + readability */}
-          <div className="absolute inset-0 bg-background/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-          <div className="absolute inset-0 gradient-radial opacity-40 mix-blend-screen" />
+          <div className="absolute inset-0 bg-background/40" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background" />
+          <div className="absolute inset-0 gradient-radial opacity-50 mix-blend-screen" />
         </div>
 
-        <Navbar />
-        <section className="container mx-auto px-6 lg:px-10 pt-24 pb-28 max-w-5xl text-center">
-          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
-            Energía Combustión Calorífica · ECC SAC
-          </span>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
-            Soluciones térmicas industriales
-            <span className="block text-primary text-glow font-light mt-2">
-              Calor confiable, producción imparable
+        <div className="relative z-10">
+          <Navbar />
+          <section className="container mx-auto px-6 lg:px-10 pt-24 pb-32 max-w-5xl text-center">
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
+              Energía Combustión Calorífica · ECC SAC
             </span>
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Transformamos el calor en productividad. Especialistas en
-            reparación, mantenimiento preventivo y correctivo de calderas,
-            quemadores, calentadores de aceite térmico y hornos.
-          </p>
-        </section>
+            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
+              Soluciones térmicas industriales
+              <span className="block text-primary text-glow font-light mt-2">
+                Calor confiable, producción imparable
+              </span>
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Transformamos el calor en productividad. Especialistas en
+              reparación, mantenimiento preventivo y correctivo de calderas,
+              quemadores, calentadores de aceite térmico y hornos.
+            </p>
+          </section>
+        </div>
       </div>
 
       <main className="container mx-auto px-6 lg:px-10 pb-24">

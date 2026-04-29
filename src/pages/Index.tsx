@@ -49,9 +49,7 @@ const Index = () => {
         </div>
 
         <Navbar />
-        <main className="container mx-auto px-6 lg:px-10 pt-24 pb-12">
-          {/* HERO */}
-          <section className="max-w-5xl mx-auto text-center pb-16">
+        <section className="container mx-auto px-6 lg:px-10 pt-24 pb-28 max-w-5xl text-center">
           <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
             Energía Combustión Calorífica · ECC SAC
           </span>
@@ -67,6 +65,9 @@ const Index = () => {
             quemadores, calentadores de aceite térmico y hornos.
           </p>
         </section>
+      </div>
+
+      <main className="container mx-auto px-6 lg:px-10 pb-24">
 
         {/* SOBRE NOSOTROS + GALERÍA */}
         <section id="sobre-nosotros" className="mb-24">

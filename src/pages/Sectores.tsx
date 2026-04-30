@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Industries from "@/components/site/Industries";
 import Footer from "@/components/site/Footer";
-import heroMachine from "@/assets/hero-machine.jpg";
+import heroSectores from "@/assets/hero-sectores-real.png";
 
 const Sectores = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Sectores = () => {
     <div className="min-h-screen bg-background text-foreground">
       <HeroHeader
         theme="boiler"
-        backgroundImage={heroMachine}
+        backgroundImage={heroSectores}
         eyebrow="Sectores · ECC SAC"
         title={
           <>

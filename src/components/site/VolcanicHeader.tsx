@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Navbar from "@/components/site/Navbar";
-import defaultHeaderBg from "@/assets/hero-control-room.jpg";
+import defaultHeaderBg from "@/assets/hero-capacidades-real.png";
 
 interface HeroHeaderProps {
   eyebrow: string;
@@ -14,7 +14,7 @@ interface HeroHeaderProps {
 const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, theme = "boiler" }: HeroHeaderProps) => {
   return (
     <>
-      <Navbar />
+      <Navbar overlayHero />
       <div className="relative isolate">
         <div className={`absolute inset-0 z-0 overflow-hidden pointer-events-none hero-theme-${theme}`}>
           <img

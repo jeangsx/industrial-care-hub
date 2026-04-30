@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import logoEcc from "@/assets/logo-ecc.png";
@@ -11,10 +12,29 @@ const links = [
   { to: "/contacto", label: "Contacto" },
 ];
 
-const Navbar = () => {
+interface NavbarProps {
+  overlayHero?: boolean;
+}
+
+const Navbar = ({ overlayHero = false }: NavbarProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const headerClass = overlayHero
+    ? isScrolled
+      ? "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/30 shadow-sm transition-all duration-300"
+      : "fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-transparent backdrop-blur-0 shadow-none transition-all duration-300"
+    : "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/30 shadow-sm transition-all duration-300";
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/30 shadow-sm">
+      <header className={headerClass}>
         <div className="container mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-3">
             <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-12 w-auto" />
@@ -53,8 +73,12 @@ const Navbar = () => {
         </div>
       </div>
       </header>
-      <div className="divider-rule mx-6 lg:mx-10" />
-      <div className="h-20 lg:h-24" aria-hidden="true" />
+      {!overlayHero && (
+        <>
+          <div className="divider-rule mx-6 lg:mx-10" />
+          <div className="h-20 lg:h-24" aria-hidden="true" />
+        </>
+      )}
     </>
   );
 };

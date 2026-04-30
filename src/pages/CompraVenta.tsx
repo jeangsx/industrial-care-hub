@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
-import heroMachine from "@/assets/hero-machine.jpg";
+import heroCompraVenta from "@/assets/hero-compra-venta-real.png";
 import burnerRealFire from "@/assets/burner-real-fire.png";
 import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
 
@@ -15,7 +15,7 @@ const CompraVenta = () => {
     <div className="min-h-screen bg-background text-foreground">
       <HeroHeader
         theme="boiler"
-        backgroundImage={heroMachine}
+        backgroundImage={heroCompraVenta}
         eyebrow="Compra y Venta · ECC SAC"
         title={
           <>

@@ -3,7 +3,7 @@ import HeroHeader from "@/components/site/HeroHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
 import ContactModal from "@/components/site/ContactModal";
-import burnerFireHero from "@/assets/burner-fire-hero.jpg";
+import heroServicios from "@/assets/hero-servicios-real.png";
 import { Button } from "@/components/ui/button";
 
 const Servicios = () => {
@@ -17,7 +17,7 @@ const Servicios = () => {
     <div className="min-h-screen bg-background text-foreground">
       <HeroHeader
         theme="burner"
-        backgroundImage={burnerFireHero}
+        backgroundImage={heroServicios}
         eyebrow="Servicios térmicos premium · ECC SAC"
         title={
           <>

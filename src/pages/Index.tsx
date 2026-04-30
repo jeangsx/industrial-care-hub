@@ -32,7 +32,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
+      <Navbar overlayHero />
       {/* Volcanic backdrop covering hero */}
       <div className="relative isolate">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">

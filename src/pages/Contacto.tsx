@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
-import heroMachine from "@/assets/hero-machine.jpg";
+import heroContacto from "@/assets/hero-contacto-real.png";
 
 const Contacto = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Contacto = () => {
     <div className="min-h-screen bg-background text-foreground">
       <HeroHeader
         theme="boiler"
-        backgroundImage={heroMachine}
+        backgroundImage={heroContacto}
         eyebrow="Contacto · ECC SAC"
         title={
           <>

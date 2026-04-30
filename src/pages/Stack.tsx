@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Footer from "@/components/site/Footer";
-import burnerFireHero from "@/assets/burner-fire-hero.jpg";
+import heroStack from "@/assets/hero-stack-real.png";
 
 const Stack = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Stack = () => {
     <div className="min-h-screen bg-background text-foreground">
       <HeroHeader
         theme="burner"
-        backgroundImage={burnerFireHero}
+        backgroundImage={heroStack}
         eyebrow="Stack técnico · ECC SAC"
         title={
           <>

@@ -12,23 +12,24 @@ interface VolcanicHeaderProps {
 
 const VolcanicHeader = ({ eyebrow, title, description, children, backgroundImage }: VolcanicHeaderProps) => {
   return (
-    <div className="relative isolate">
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <img
-          src={backgroundImage ?? defaultVolcanicBg}
-          alt="Fondo de roca volcánica con vetas de lava incandescente"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-background/40" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background" />
-        <div className="absolute inset-0 gradient-radial opacity-50 mix-blend-screen" />
-      </div>
+    <>
+      <Navbar />
+      <div className="relative isolate">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <img
+            src={backgroundImage ?? defaultVolcanicBg}
+            alt="Fondo de roca volcánica con vetas de lava incandescente"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+          />
+          <div className="absolute inset-0 bg-background/40" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background" />
+          <div className="absolute inset-0 gradient-radial opacity-50 mix-blend-screen" />
+        </div>
 
-      <div className="relative z-10">
-        <Navbar />
-        <section className="container mx-auto px-6 lg:px-10 pt-20 pb-28 max-w-5xl text-center">
+        <div className="relative z-10">
+          <section className="container mx-auto px-6 lg:px-10 pt-20 pb-28 max-w-5xl text-center">
           <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
             {eyebrow}
           </span>

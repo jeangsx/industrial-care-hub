@@ -1,25 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ContactModal from "@/components/site/ContactModal";
-
-const burnerVideo = { url: "/videos/burner-fire.mp4" };
+import burnerImage from "@/assets/burner-fire-hero.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden pt-32">
-      {/* Background video: real industrial burner with live fire */}
-      <div className="absolute inset-0 bg-background">
-        <video
-          src={burnerVideo.url}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-label="Quemador industrial encendido con fuego real"
-          className="w-full h-full object-cover"
+      {/* Background: industrial burner with live fire (animated) */}
+      <div className="absolute inset-0 bg-background overflow-hidden">
+        <img
+          src={burnerImage}
+          alt="Quemador industrial en funcionamiento botando fuego"
+          className="w-full h-full object-cover animate-burner-flicker will-change-transform"
+          width={1920}
+          height={1080}
         />
-        {/* Subtle bottom fade for text legibility, keep fire visible */}
+        {/* Animated heat shimmer / flame glow overlay */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 mix-blend-screen opacity-60 animate-heat-haze pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 45% 35% at 55% 55%, hsl(20 95% 55% / 0.55), transparent 70%), radial-gradient(ellipse 30% 25% at 50% 60%, hsl(45 100% 60% / 0.45), transparent 75%)",
+          }}
+        />
+        {/* Subtle fades for text legibility, keep fire visible */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/10 to-transparent" />
       </div>

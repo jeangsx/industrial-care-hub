@@ -68,8 +68,8 @@ const Contacto = () => {
                 Contacto directo
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Erick Soria · Gerente Técnico<br />
-                +51 941 388 698
+                Erick Soria · Gerente de Proyecto<br />
+                +51 938 154 638
               </p>
               <p className="text-sm font-semibold">Solicitud de visita técnica</p>
               <p className="text-sm text-muted-foreground">Escríbenos por WhatsApp y coordinamos visita en menos de 48 horas.</p>

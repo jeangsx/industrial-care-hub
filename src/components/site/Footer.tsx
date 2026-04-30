@@ -40,7 +40,8 @@ const Footer = () => {
             <h4 className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-4">// Contacto</h4>
             <ul className="space-y-3 text-sm text-muted-foreground font-mono-ed">
               <li>Av. Metropolitana Mz G1 Lt 43, Ate – Lima</li>
-              <li>+51 972 316 786 · +51 938 154 638</li>
+              <li>+51 972 316 786 
+                 +51 938 154 638</li>
               <li>ericksoria@calderas-ecc.com</li>
               <li>www.calderas-ecc.com</li>
             </ul>

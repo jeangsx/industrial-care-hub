@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import ContactModal from "@/components/site/ContactModal";
 import factoryImg from "@/assets/cta-automation.jpg";
 
 const CTA = () => {
@@ -35,13 +36,16 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-5 mb-16">
-            <Button variant="hero" size="xl" asChild>
-              <a href="mailto:ericksoria@calderas-ecc.com">
-                Solicitar visita técnica <ArrowUpRight className="size-4" />
-              </a>
-            </Button>
+            <ContactModal
+              title="Solicitar visita técnica"
+              trigger={
+                <Button variant="hero" size="xl" className="inline-flex items-center gap-2">
+                  Solicitar visita técnica <ArrowUpRight className="size-4" />
+                </Button>
+              }
+            />
             <Button variant="ghostLine" size="lg" asChild>
-              <a href="tel:+51972316786">+51 972 316 786</a>
+              <a href="tel:+51972316786">+51 938 154 638</a>
             </Button>
           </div>
 

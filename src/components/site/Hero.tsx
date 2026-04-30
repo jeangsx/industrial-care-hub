@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ContactModal from "@/components/site/ContactModal";
 import heroImage from "@/assets/hero-control-room.jpg";
 
 const Hero = () => {
@@ -48,11 +49,13 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-5">
-              <Button variant="hero" size="xl" asChild>
-                <a href="#contacto">
-                  Solicitar servicio <ArrowRight className="size-4" />
-                </a>
-              </Button>
+              <ContactModal
+                trigger={
+                  <Button variant="hero" size="xl" className="inline-flex items-center gap-2">
+                    Solicitar servicio <ArrowRight className="size-4" />
+                  </Button>
+                }
+              />
               <Button variant="ghostLine" size="lg" asChild>
                 <a href="#planes">Ver planes</a>
               </Button>

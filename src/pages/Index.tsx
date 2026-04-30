@@ -90,7 +90,7 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { k: "+7", v: "Años de experiencia" },
+                  { k: "+10", v: "Años de experiencia" },
                   { k: "6", v: "Sectores industriales" },
                   { k: "24/7", v: "Atención de emergencias" },
                 ].map((item) => (

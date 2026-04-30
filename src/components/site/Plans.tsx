@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import ContactModal from "@/components/site/ContactModal";
 
 const plans = [
   {
@@ -108,13 +108,14 @@ const Plans = () => {
               ))}
             </ul>
 
-            <Button
-              variant={p.featured ? "editorial" : "outline"}
-              className="w-full"
-              asChild
-            >
-              <NavLink to="/contacto">Solicitar cotización</NavLink>
-            </Button>
+            <ContactModal
+              title="Solicitar cotización"
+              trigger={
+                <Button variant={p.featured ? "editorial" : "outline"} className="w-full">
+                  Solicitar cotización
+                </Button>
+              }
+            />
           </div>
         ))}
       </div>

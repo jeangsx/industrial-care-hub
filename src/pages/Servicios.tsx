@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import VolcanicHeader from "@/components/site/VolcanicHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
+import ContactModal from "@/components/site/ContactModal";
 import volcanicBg from "@/assets/volcanic-bg-servicios.jpg";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 const Servicios = () => {
   const [open, setOpen] = useState(false);
@@ -33,77 +31,14 @@ const Servicios = () => {
       <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="max-w-5xl mx-auto mb-16 text-center">
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Dialog open={open} onOpenChange={setOpen}>
-              <DialogTrigger asChild>
+            <ContactModal
+              title="Solicitar visita técnica"
+              trigger={
                 <Button variant="hero" size="xl" className="min-w-[200px]">
                   Solicitar visita técnica
                 </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-md">
-                <DialogHeader className="text-left">
-                  <DialogTitle>Solicita tu visita técnica</DialogTitle>
-                  <DialogDescription className="pt-2">
-                    Tus datos se enviarán directo al WhatsApp <span className="font-semibold text-foreground">+51 941 388 698</span>
-                  </DialogDescription>
-                </DialogHeader>
-
-                <form
-                  className="mt-6 space-y-4"
-                  onSubmit={(event) => {
-                    event.preventDefault();
-                    const form = new FormData(event.currentTarget as HTMLFormElement);
-                    const nombre = form.get("nombre")?.toString().trim() ?? "";
-                    const empresa = form.get("empresa")?.toString().trim() ?? "";
-                    const telefono = form.get("telefono")?.toString().trim() ?? "";
-                    const email = form.get("email")?.toString().trim() ?? "";
-                    const mensaje = form.get("mensaje")?.toString().trim() ?? "";
-                    const text = `Hola, solicito una visita técnica.%0A%0A*Nombre:* ${nombre}%0A*Empresa:* ${empresa}%0A*Teléfono:* ${telefono}%0A*Email:* ${email}%0A*Detalles:* ${mensaje}`;
-                    window.open(`https://wa.me/51941388698?text=${encodeURIComponent(text)}`, "_blank");
-                    setOpen(false);
-                  }}
-                >
-                  <div className="space-y-3">
-                    <div>
-                      <Label htmlFor="nombre" className="text-xs">Nombre</Label>
-                      <Input id="nombre" name="nombre" placeholder="Tu nombre" required className="mt-1 h-9" />
-                    </div>
-                    <div>
-                      <Label htmlFor="empresa" className="text-xs">Empresa</Label>
-                      <Input id="empresa" name="empresa" placeholder="Nombre de empresa" required className="mt-1 h-9" />
-                    </div>
-                    <div>
-                      <Label htmlFor="telefono" className="text-xs">Teléfono</Label>
-                      <Input id="telefono" name="telefono" placeholder="+51..." required className="mt-1 h-9" />
-                    </div>
-                    <div>
-                      <Label htmlFor="email" className="text-xs">Email</Label>
-                      <Input id="email" name="email" type="email" placeholder="correo@empresa.com" required className="mt-1 h-9" />
-                    </div>
-                    <div>
-                      <Label htmlFor="mensaje" className="text-xs">Mensaje</Label>
-                      <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        rows={3}
-                        className="w-full h-20 rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
-                        placeholder="Describe tu situación"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 pt-4">
-                    <DialogClose asChild>
-                      <Button variant="outline" type="button" className="flex-1 h-9">
-                        Cancelar
-                      </Button>
-                    </DialogClose>
-                    <Button variant="hero" type="submit" className="flex-1 h-9">
-                      Enviar
-                    </Button>
-                  </div>
-                </form>
-              </DialogContent>
-            </Dialog>
+              }
+            />
 
             <a href="https://wa.me/51941388698" target="_blank" rel="noopener noreferrer" className="inline-block">
               <Button variant="outline" size="lg" className="h-14 px-6">

@@ -1,19 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ContactModal from "@/components/site/ContactModal";
-import heroImage from "@/assets/hero-control-room.jpg";
+import burnerVideo from "@/assets/burner-fire.mp4.asset.json";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden pt-32">
-      {/* Background image */}
+      {/* Background video: real industrial burner with live fire */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Sala de control industrial con telemetría en tiempo real para ingeniería de sistemas"
-          className="w-full h-full object-cover opacity-55"
-          width={1920}
-          height={1080}
+        <video
+          src={burnerVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label="Quemador industrial encendido con fuego real"
+          className="w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />

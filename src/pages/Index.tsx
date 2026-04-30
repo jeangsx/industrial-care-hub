@@ -32,7 +32,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Volcanic backdrop covering navbar + hero */}
+      <Navbar />
+      {/* Volcanic backdrop covering hero */}
       <div className="relative isolate">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
@@ -49,7 +50,6 @@ const Index = () => {
         </div>
 
         <div className="relative z-10">
-          <Navbar />
           <section className="container mx-auto px-6 lg:px-10 pt-24 pb-32 max-w-5xl text-center">
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
               Energía Combustión Calorífica · ECC SAC

@@ -159,6 +159,105 @@ const Servicios = () => {
           </div>
         </section>
 
+        {/* REPOTENCIAMOS TU CALDERA */}
+        <section id="repotenciamiento" className="mb-20 animate-fade-up" style={{ animationDelay: "120ms" }}>
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-primary/30 bg-gradient-to-br from-background via-surface/90 to-background p-10 md:p-14 shadow-[0_40px_120px_-50px_hsl(var(--primary)/0.4)]">
+            {/* Decorative glow */}
+            <div
+              aria-hidden="true"
+              className="absolute -top-20 -right-20 w-96 h-96 rounded-full opacity-30 blur-3xl pointer-events-none"
+              style={{ background: "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)" }}
+            />
+
+            <div className="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-5">
+                  <span className="size-1.5 rounded-full bg-primary animate-blink" />
+                  Servicio destacado
+                </div>
+                <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-5 text-balance">
+                  Repotenciamos
+                  <span className="block text-primary text-glow font-light mt-1">tu caldera</span>
+                </h2>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                  Recuperamos la capacidad original de tu equipo —y la superamos. Intervenimos
+                  componentes críticos, modernizamos el control de combustión y ajustamos la
+                  eficiencia térmica para que tu caldera produzca más vapor con menos combustible.
+                </p>
+
+                <div className="grid grid-cols-3 gap-4 mb-8">
+                  {[
+                    { k: "+8%", v: "Eficiencia recuperada" },
+                    { k: "−15%", v: "Consumo de combustible" },
+                    { k: "+10", v: "Años de vida útil" },
+                  ].map((s) => (
+                    <div key={s.v} className="rounded-2xl border border-border/70 bg-background/60 p-4">
+                      <div className="font-mono-ed text-2xl md:text-3xl text-primary font-semibold tabular-nums">{s.k}</div>
+                      <div className="font-mono-ed text-[10px] uppercase tracking-[0.22em] text-muted-foreground mt-2 leading-snug">
+                        {s.v}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <ContactModal
+                    title="Solicitar diagnóstico de repotenciamiento"
+                    trigger={
+                      <Button variant="hero" size="lg">Solicitar diagnóstico</Button>
+                    }
+                  />
+                  <a href="https://wa.me/51941388698" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghostLine" size="lg">Hablar con un técnico</Button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="grid gap-3">
+                {[
+                  {
+                    title: "Cambio y mandrinado de tubos",
+                    text: "Reemplazo de tubos de fuego o agua y sellado hermético para devolver la presión nominal.",
+                  },
+                  {
+                    title: "Modernización del quemador",
+                    text: "Conversión a gas/dual y upgrade a control Autoflame MK8/MK9 con servoposicionamiento.",
+                  },
+                  {
+                    title: "Optimización de combustión",
+                    text: "Análisis de gases, ajuste de mezcla aire–combustible y reducción de exceso de O₂.",
+                  },
+                  {
+                    title: "Refractario y aislamiento",
+                    text: "Reparación de tapas, conos y forrado térmico para minimizar pérdidas por radiación.",
+                  },
+                  {
+                    title: "Tablero eléctrico y seguridad",
+                    text: "Renovación del tren de combustión, sensores y enclavamientos certificados.",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={item.title}
+                    className="group rounded-2xl border border-border/70 bg-background/60 p-5 hover:border-primary/60 hover:bg-background/80 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="font-mono-ed text-[11px] uppercase tracking-[0.22em] text-primary tabular-nums mt-1">
+                        0{i + 1}
+                      </div>
+                      <div>
+                        <h3 className="text-base md:text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-20 animate-fade-up" style={{ animationDelay: "140ms" }}>
           <Services />
         </section>

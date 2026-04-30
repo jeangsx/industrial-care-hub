@@ -1,6 +1,5 @@
 import Navbar from "@/components/site/Navbar";
 import Services from "@/components/site/Services";
-import volcanicBg from "@/assets/volcanic-bg.jpg";
 import Industries from "@/components/site/Industries";
 import Clientes from "@/components/site/Clientes";
 import CTA from "@/components/site/CTA";
@@ -9,11 +8,12 @@ import Autoflame from "@/components/site/Autoflame";
 import WhyUs from "@/components/site/WhyUs";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
-import boilerInterior from "@/assets/ecc-boiler-interior.jpg";
-import welder from "@/assets/ecc-welder.jpg";
-import tubesheet from "@/assets/ecc-tubesheet.jpg";
-import flanges from "@/assets/ecc-flanges.jpg";
-import weldingInside from "@/assets/ecc-welding-inside.jpg";
+import burnerHero from "@/assets/burner-fire-hero.jpg";
+import processEngineer from "@/assets/process-engineer.jpg";
+import processPipework from "@/assets/process-pipework.jpg";
+import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
+import serviceMaintenance from "@/assets/service-maintenance.jpg";
+import burnerRealFire from "@/assets/burner-real-fire.png";
 
 const Index = () => {
   useEffect(() => {
@@ -37,16 +37,13 @@ const Index = () => {
       <div className="relative isolate">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
-            src={volcanicBg}
-            alt="Fondo de roca volcánica con vetas de lava incandescente"
-            className="w-full h-full object-cover"
-            width={1920}
-            height={1080}
+            src={burnerHero}
+            alt="Quemador industrial en funcionamiento"
+            className="absolute inset-0 w-full h-full object-cover object-[55%_50%] animate-hero-pan"
           />
-          {/* Tints: keep brand dark + readability */}
-          <div className="absolute inset-0 bg-background/40" />
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background" />
-          <div className="absolute inset-0 gradient-radial opacity-50 mix-blend-screen" />
+          <div className="absolute inset-0 bg-background/30" />
+          <div className="absolute left-[55%] top-[48%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,184,90,0.34),transparent_45%)] blur-3xl opacity-95 animate-fire-flicker" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/15 to-background" />
         </div>
 
         <div className="relative z-10">
@@ -105,9 +102,9 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-2 grid-rows-2 gap-3">
-              <img src={boilerInterior} alt="Interior de caldera industrial pirotubular" className="w-full h-full object-cover rounded-2xl border border-border row-span-2" loading="lazy" />
-              <img src={tubesheet} alt="Detalle de tubos de caldera tras mantenimiento" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
-              <img src={welder} alt="Técnico ECC ejecutando trabajos de soldadura en caldera" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
+              <img src={processEngineer} alt="Ingeniero de planta junto a caldera térmica" className="w-full h-full object-cover rounded-2xl border border-border row-span-2" loading="lazy" />
+              <img src={processPipework} alt="Red de tuberías y conexiones de caldera" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
+              <img src={serviceDiagnostics} alt="Técnico analizándo combustion y controlado de caldera" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
             </div>
           </div>
         </section>
@@ -132,7 +129,7 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[boilerInterior, welder, weldingInside, flanges, tubesheet, boilerInterior, welder, weldingInside].slice(0, 4).map((img, i) => (
+            {[processEngineer, serviceMaintenance, burnerRealFire, processPipework].slice(0, 4).map((img, i) => (
               <img key={i} src={img} alt={`Trabajo de mantenimiento térmico ECC ${i + 1}`} className="w-full aspect-square object-cover rounded-2xl border border-border hover:opacity-80 transition-opacity" loading="lazy" />
             ))}
           </div>

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import VolcanicHeader from "@/components/site/VolcanicHeader";
+import HeroHeader from "@/components/site/HeroHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
-import volcanicBg from "@/assets/volcanic-bg-capacidades.jpg";
+import heroMachine from "@/assets/hero-machine.jpg";
 
 const Capacidades = () => {
   useEffect(() => {
@@ -11,8 +11,9 @@ const Capacidades = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <VolcanicHeader
-        backgroundImage={volcanicBg}
+      <HeroHeader
+        theme="boiler"
+        backgroundImage={heroMachine}
         eyebrow="Capacidades · ECC SAC"
         title={
           <>

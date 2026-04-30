@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import VolcanicHeader from "@/components/site/VolcanicHeader";
+import HeroHeader from "@/components/site/HeroHeader";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Footer from "@/components/site/Footer";
-import volcanicBg from "@/assets/volcanic-bg-stack.jpg";
+import burnerFireHero from "@/assets/burner-fire-hero.jpg";
 
 const Stack = () => {
   useEffect(() => {
@@ -11,8 +11,9 @@ const Stack = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <VolcanicHeader
-        backgroundImage={volcanicBg}
+      <HeroHeader
+        theme="burner"
+        backgroundImage={burnerFireHero}
         eyebrow="Stack técnico · ECC SAC"
         title={
           <>

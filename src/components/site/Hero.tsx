@@ -1,46 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ContactModal from "@/components/site/ContactModal";
-import burnerImage from "@/assets/burner-real-fire.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden pt-32">
       {/* Background: real industrial burner with animated fire */}
       <div className="absolute inset-0 bg-background overflow-hidden">
-        <img
-          src={burnerImage}
-          alt="Quemador industrial real en funcionamiento con fuego encendido"
-          className="w-full h-full object-cover object-center animate-burner-flicker will-change-transform"
-          width={1920}
-          height={1080}
-        />
-
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/55 to-background/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent" />
-
-        {/* Fire animation anchored to the burner flame */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none mix-blend-screen animate-burner-flicker"
-          style={{
-            background:
-              "radial-gradient(ellipse 28% 20% at 46% 55%, hsl(38 100% 72% / 0.78), transparent 60%), radial-gradient(ellipse 22% 16% at 39% 55%, hsl(24 100% 56% / 0.52), transparent 62%), radial-gradient(ellipse 14% 18% at 53% 53%, hsl(18 100% 54% / 0.4), transparent 65%)",
-            opacity: 0.95,
-            filter: "blur(12px)",
-            transformOrigin: "52% 55%",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none animate-heat-haze"
-          style={{
-            background:
-              "radial-gradient(ellipse 24% 14% at 44% 54%, hsl(48 100% 82% / 0.28), transparent 56%), radial-gradient(ellipse 30% 18% at 41% 56%, hsl(20 100% 58% / 0.18), transparent 60%)",
-            mixBlendMode: "screen",
-            filter: "blur(18px)",
-          }}
-        />
       </div>
 
       {/* Decorative grid */}

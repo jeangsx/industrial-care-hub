@@ -174,6 +174,57 @@
   100% { transform: translateY(2400%); }
 }
 
+@keyframes hero-pan {
+  0%   { transform: scale(1.02) translateX(0); }
+  50%  { transform: scale(1.04) translateX(-2%); }
+  100% { transform: scale(1.02) translateX(0); }
+}
+
+@keyframes heat-haze {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateY(-2%) scale(1.02);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fire-flicker {
+  0%, 100% {
+    opacity: 0.82;
+    transform: scale(1) translateY(0);
+  }
+  25% {
+    opacity: 0.92;
+    transform: scale(1.02) translateY(-1%);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scale(0.98) translateY(1%);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(1.01) translateY(-0.5%);
+  }
+}
+
+.animate-float-slow { animation: float-slow 12s ease-in-out infinite; will-change: transform; }
 .animate-fade-up { animation: fade-up 0.9s var(--ease-editorial) both; }
 .animate-glow { animation: glow-pulse 3s ease-in-out infinite; }
 .animate-blink { animation: blink 1.6s ease-in-out infinite; }
+.animate-hero-pan { animation: hero-pan 25s linear infinite; will-change: transform; }
+.animate-heat-haze { animation: heat-haze 12s ease-in-out infinite; will-change: transform, opacity; }
+.animate-fire-flicker { animation: fire-flicker 1.6s ease-in-out infinite; will-change: transform, opacity; }
+.hero-accent { pointer-events: none; }
+.hero-heat { pointer-events: none; }
+.hero-theme-boiler .hero-accent { background: radial-gradient(circle, rgba(255, 180, 90, 0.32), transparent 55%); }
+.hero-theme-boiler .hero-heat { background: radial-gradient(circle, rgba(255, 190, 110, 0.12), transparent 55%); }
+.hero-theme-burner .hero-accent { background: radial-gradient(circle, rgba(255, 120, 50, 0.38), transparent 55%); }
+.hero-theme-burner .hero-heat { background: radial-gradient(circle, rgba(255, 95, 28, 0.14), transparent 55%); }

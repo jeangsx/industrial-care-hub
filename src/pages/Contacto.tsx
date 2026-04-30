@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import VolcanicHeader from "@/components/site/VolcanicHeader";
+import HeroHeader from "@/components/site/HeroHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
-import volcanicBg from "@/assets/volcanic-bg-contacto.jpg";
+import heroMachine from "@/assets/hero-machine.jpg";
 
 const Contacto = () => {
   useEffect(() => {
@@ -11,8 +11,9 @@ const Contacto = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <VolcanicHeader
-        backgroundImage={volcanicBg}
+      <HeroHeader
+        theme="boiler"
+        backgroundImage={heroMachine}
         eyebrow="Contacto · ECC SAC"
         title={
           <>

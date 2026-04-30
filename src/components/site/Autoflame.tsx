@@ -1,5 +1,5 @@
-import mk8 from "@/assets/ecc-autoflame-mk8.jpg";
-import mk9 from "@/assets/ecc-autoflame-mk9.jpg";
+import burnerRealFire from "@/assets/burner-real-fire.png";
+import processEngineer from "@/assets/process-engineer.jpg";
 
 const Autoflame = () => {
   return (
@@ -40,13 +40,13 @@ const Autoflame = () => {
           </div>
           <div className="grid grid-cols-2 bg-background/50">
             <figure className="relative border-l border-border">
-              <img src={mk8} alt="Controlador Autoflame MK8 MM para calderas industriales" className="w-full h-full object-cover aspect-square" loading="lazy" />
+              <img src={burnerRealFire} alt="Quemador industrial con llama brillante" className="w-full h-full object-cover aspect-square" loading="lazy" />
               <figcaption className="absolute bottom-0 inset-x-0 bg-background/85 backdrop-blur-sm px-4 py-2 font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary">
                 MK8 MM
               </figcaption>
             </figure>
             <figure className="relative border-l border-border">
-              <img src={mk9} alt="Controlador Autoflame Mini MK9 MM" className="w-full h-full object-cover aspect-square" loading="lazy" />
+              <img src={processEngineer} alt="Ingeniero de planta junto a caldera térmica" className="w-full h-full object-cover aspect-square" loading="lazy" />
               <figcaption className="absolute bottom-0 inset-x-0 bg-background/85 backdrop-blur-sm px-4 py-2 font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary">
                 MINI MK9 MM
               </figcaption>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import VolcanicHeader from "@/components/site/VolcanicHeader";
+import HeroHeader from "@/components/site/HeroHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
 import ContactModal from "@/components/site/ContactModal";
-import volcanicBg from "@/assets/volcanic-bg-servicios.jpg";
+import burnerFireHero from "@/assets/burner-fire-hero.jpg";
 import { Button } from "@/components/ui/button";
 
 const Servicios = () => {
@@ -15,8 +15,9 @@ const Servicios = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <VolcanicHeader
-        backgroundImage={volcanicBg}
+      <HeroHeader
+        theme="burner"
+        backgroundImage={burnerFireHero}
         eyebrow="Servicios térmicos premium · ECC SAC"
         title={
           <>

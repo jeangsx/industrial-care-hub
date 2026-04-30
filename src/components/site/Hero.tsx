@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ContactModal from "@/components/site/ContactModal";
-import burnerVideo from "@/assets/burner-fire.mp4.asset.json";
+
+const burnerVideo = { url: "/videos/burner-fire.mp4" };
 
 const Hero = () => {
   return (

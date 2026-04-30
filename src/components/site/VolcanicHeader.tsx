@@ -30,19 +30,20 @@ const VolcanicHeader = ({ eyebrow, title, description, children, backgroundImage
 
         <div className="relative z-10">
           <section className="container mx-auto px-6 lg:px-10 pt-20 pb-28 max-w-5xl text-center">
-          <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
-            {eyebrow}
-          </span>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
-            {title}
-          </h1>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            {description}
-          </p>
-          {children && <div className="mt-10">{children}</div>}
-        </section>
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
+              {eyebrow}
+            </span>
+            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
+              {title}
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              {description}
+            </p>
+            {children && <div className="mt-10">{children}</div>}
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

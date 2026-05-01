@@ -33,7 +33,7 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
         </div>
 
         <div className="relative z-10">
-          <section className="container mx-auto px-6 lg:px-10 pt-20 pb-28 max-w-5xl text-center">
+          <section className="container mx-auto px-6 lg:px-10 pt-40 md:pt-48 pb-28 max-w-5xl text-center">
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
               {eyebrow}
             </span>

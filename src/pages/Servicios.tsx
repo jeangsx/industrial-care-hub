@@ -81,7 +81,7 @@ const Servicios = () => {
           ].map((item, index) => (
             <article
               key={item.title}
-              className="group rounded-[2rem] border border-border/70 bg-surface/80 p-8 shadow-lg shadow-transparent transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-background/80 hover:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.65)] animate-fade-up"
+              className="group rounded-[2rem] border border-border/70 bg-surface/80 p-8 shadow-lg shadow-transparent transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-background/80 hover:shadow-[0_30px_80px_-40px_rgba panel-3d(16,185,129,0.65)] animate-fade-up"
               style={{ animationDelay: `${index * 80}ms` }}
             >
               <div className="text-primary font-mono-ed text-[11px] uppercase tracking-[0.34em] mb-4">
@@ -96,7 +96,7 @@ const Servicios = () => {
         </section>
 
         <section className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start mb-20">
-          <div className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 shadow-lg shadow-transparent animate-fade-up">
+          <div className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 shadow-lg shadow-transparent animate-fade-up panel-3d">
             <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
               Soluciones detalladas
             </div>

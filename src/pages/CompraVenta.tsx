@@ -30,7 +30,7 @@ const CompraVenta = () => {
 
       <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="grid gap-6 mb-16 lg:grid-cols-2">
-          <article className="group overflow-hidden rounded-[2rem] border border-border/70 bg-surface/80 shadow-sm transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-primary/50">
+          <article className="group overflow-hidden rounded-[2rem] border border-border/70 bg-surface/80 shadow-sm transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-primary/50 panel-3d">
             <img
               src={serviceDiagnostics}
               alt="Inspección técnica de caldera industrial"
@@ -47,7 +47,7 @@ const CompraVenta = () => {
             </div>
           </article>
 
-          <article className="group overflow-hidden rounded-[2rem] border border-border/70 bg-surface/80 shadow-sm transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-primary/50">
+          <article className="group overflow-hidden rounded-[2rem] border border-border/70 bg-surface/80 shadow-sm transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-primary/50 panel-3d">
             <img
               src={burnerRealFire}
               alt="Quemador industrial con flama brillante"
@@ -66,7 +66,7 @@ const CompraVenta = () => {
         </section>
 
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] mb-20">
-          <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.005] hover:border-primary/50 hover:shadow-glow">
+          <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.005] hover:border-primary/50 hover:shadow-glow panel-3d">
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
               Compra
             </span>
@@ -84,7 +84,7 @@ const CompraVenta = () => {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.005] hover:border-primary/50 hover:shadow-glow">
+          <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12 transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.005] hover:border-primary/50 hover:shadow-glow panel-3d">
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
               Venta
             </span>
@@ -103,7 +103,7 @@ const CompraVenta = () => {
           </div>
         </section>
 
-        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 mb-20">
+        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 mb-20 panel-3d">
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Cómo trabajamos</h3>
@@ -148,7 +148,7 @@ const CompraVenta = () => {
           ))}
         </section>
 
-        <section className="rounded-3xl border border-border/70 bg-surface/80 p-10 mb-20">
+        <section className="rounded-3xl border border-border/70 bg-surface/80 p-10 mb-20 panel-3d">
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="rounded-3xl bg-background/70 border border-border p-8">
               <h3 className="text-2xl font-semibold mb-4">Compra segura</h3>
@@ -171,7 +171,7 @@ const CompraVenta = () => {
           </div>
         </section>
 
-        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10">
+        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 panel-3d">
           <div className="grid gap-6 lg:grid-cols-3">
             {[
               { label: "Contacto inmediato", value: "+51 938 154 638" },

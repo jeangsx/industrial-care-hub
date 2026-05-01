@@ -40,14 +40,14 @@ const Caso = () => {
               desc: "Integración, pruebas de aceptación y entrenamiento operativo para una transferencia segura.",
             },
           ].map((item) => (
-            <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8">
+            <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8 panel-3d">
               <h2 className="text-2xl font-semibold mb-4">{item.title}</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
             </article>
           ))}
         </section>
 
-        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 mb-20">
+        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 mb-20 panel-3d">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
@@ -66,7 +66,7 @@ const Caso = () => {
                 { label: "Menor retención de inventario", value: "18%" },
                 { label: "Ciclos de puesta en marcha", value: "-22%" },
               ].map((item) => (
-                <div key={item.label} className="rounded-3xl bg-background/70 p-6 border border-border">
+                <div key={item.label} className="rounded-3xl bg-background/70 p-6 border border-border panel-3d">
                   <div className="text-4xl font-semibold text-primary">{item.value}</div>
                   <div className="text-sm text-muted-foreground mt-2">{item.label}</div>
                 </div>

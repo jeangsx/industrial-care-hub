@@ -31,7 +31,7 @@ const WhyUs = () => {
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {reasons.map((r) => (
-          <div key={r.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8">
+          <div key={r.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8 panel-3d">
             <div className="size-12 rounded-md border border-border bg-background grid place-items-center mb-6">
               <r.icon className="size-5 text-primary" strokeWidth={1.6} />
             </div>

@@ -42,14 +42,14 @@ const Contacto = () => {
               desc: "Acompañamos paradas programadas y respondemos emergencias para que tu producción no se detenga.",
             },
           ].map((item) => (
-            <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8">
+            <article key={item.title} className="rounded-3xl border border-border/70 bg-surface/70 p-8 panel-3d">
               <h2 className="text-2xl font-semibold mb-4">{item.title}</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
             </article>
           ))}
         </section>
 
-        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 mb-20">
+        <section className="rounded-[2rem] border border-border/70 bg-surface/80 p-10 mb-20 panel-3d">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
             Conecta con nosotros
           </h2>

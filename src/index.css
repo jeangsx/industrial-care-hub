@@ -229,20 +229,19 @@
 .hero-theme-burner .hero-accent { background: radial-gradient(circle, rgba(255, 120, 50, 0.38), transparent 55%); }
 .hero-theme-burner .hero-heat { background: radial-gradient(circle, rgba(255, 95, 28, 0.14), transparent 55%); }
 
-/* 3D hover panel effect — used on cards across the site */
+/* 3D hover panel effect — subtle lift with neon green glow */
 .panel-3d {
-  transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-              border-color 0.5s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s ease;
   will-change: transform;
 }
 .panel-3d:hover {
-  transform: perspective(1100px) rotateX(4deg) rotateY(-6deg) translateY(-6px) scale(1.02);
+  transform: translateY(-6px);
   box-shadow:
-    0 30px 60px -20px hsl(220 16% 2% / 0.7),
-    0 0 0 1px hsl(var(--primary) / 0.35),
-    0 0 30px -5px hsl(var(--primary) / 0.35);
-  border-color: hsl(var(--primary) / 0.55);
+    0 20px 40px -15px hsl(220 16% 2% / 0.6),
+    0 0 0 1px hsl(var(--primary) / 0.5),
+    0 0 24px -2px hsl(var(--primary) / 0.45),
+    0 0 60px -10px hsl(var(--primary) / 0.35);
+  border-color: hsl(var(--primary) / 0.6);
 }
-.panel-3d > * { transform: translateZ(0); }

@@ -71,7 +71,7 @@ const Index = () => {
         {/* SOBRE NOSOTROS + GALERÍA */}
         <section id="sobre-nosotros" className="mb-24">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-stretch">
-            <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12">
+            <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12 panel-3d">
               <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
                 Sobre nosotros
               </span>

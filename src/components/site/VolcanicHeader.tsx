@@ -21,8 +21,12 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
             src={backgroundImage ?? defaultHeaderBg}
             alt="Fondo industrial de caldera y quemador con efecto dinámico"
             className="w-full h-full object-cover object-[50%_45%] brightness-[1.05] contrast-[1.08] saturate-[1.1] animate-hero-pan"
-            width={1920}
-            height={1080}
+            width={1600}
+            height={900}
+            loading="eager"
+            decoding="async"
+            // @ts-ignore
+            fetchpriority="high"
           />
           <div className="absolute inset-0 bg-background/20" />
           <div className="absolute inset-0 hero-heat animate-heat-haze mix-blend-screen opacity-55" />
@@ -33,14 +37,14 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
         </div>
 
         <div className="relative z-10">
-          <section className="container mx-auto px-6 lg:px-10 pt-40 md:pt-48 pb-28 max-w-5xl text-center">
+          <section className="container mx-auto px-4 sm:px-6 lg:px-10 pt-32 sm:pt-40 md:pt-48 pb-20 sm:pb-28 max-w-5xl text-center">
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
               {eyebrow}
             </span>
-            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-5 sm:mb-6 text-balance">
               {title}
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto px-2">
               {description}
             </p>
             {children && <div className="mt-10">{children}</div>}

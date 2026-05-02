@@ -3,7 +3,7 @@ import HeroHeader from "@/components/site/HeroHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
 import ContactModal from "@/components/site/ContactModal";
-import heroServicios from "@/assets/hero-servicios-real.png";
+import heroServicios from "@/assets/hero-servicios-real.jpg";
 import { Button } from "@/components/ui/button";
 
 const Servicios = () => {

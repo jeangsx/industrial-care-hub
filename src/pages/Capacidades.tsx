@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
-import heroCapacidades from "@/assets/hero-capacidades-real.png";
+import heroCapacidades from "@/assets/hero-capacidades-real.jpg";
 
 const Capacidades = () => {
   useEffect(() => {

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Footer from "@/components/site/Footer";
-import heroStack from "@/assets/hero-stack-real.png";
+import heroStack from "@/assets/hero-stack-real.jpg";
 
 const Stack = () => {
   useEffect(() => {

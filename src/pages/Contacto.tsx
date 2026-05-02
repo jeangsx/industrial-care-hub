@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
-import heroContacto from "@/assets/hero-contacto-real.png";
+import heroContacto from "@/assets/hero-contacto-real.jpg";
 
 const Contacto = () => {
   useEffect(() => {

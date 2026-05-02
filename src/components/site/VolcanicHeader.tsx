@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Navbar from "@/components/site/Navbar";
-import defaultHeaderBg from "@/assets/hero-capacidades-real.png";
+import defaultHeaderBg from "@/assets/hero-capacidades-real.jpg";
 
 interface HeroHeaderProps {
   eyebrow: string;

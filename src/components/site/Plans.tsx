@@ -72,7 +72,7 @@ const Plans = () => {
         {plans.map((p) => (
           <div
             key={p.code}
-            className={`relative rounded-3xl border p-8 flex flex-col ${
+            className={`relative rounded-3xl border p-8 flex flex-col panel-3d ${
               p.featured
                 ? "border-primary/60 bg-surface shadow-[var(--shadow-glow)]"
                 : "border-border/70 bg-surface/70"

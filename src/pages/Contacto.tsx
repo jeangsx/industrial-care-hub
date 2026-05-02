@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
-import heroContacto from "@/assets/hero-contacto-real.png";
+import heroContacto from "@/assets/hero-contacto-real.jpg";
 
 const Contacto = () => {
   useEffect(() => {
@@ -75,6 +75,31 @@ const Contacto = () => {
               <p className="text-sm font-semibold">Solicitud de visita técnica</p>
               <p className="text-sm text-muted-foreground">Escríbenos por WhatsApp y coordinamos visita en menos de 48 horas.</p>
             </div>
+          </div>
+        </section>
+
+        {/* Preguntas frecuentes */}
+        <section className="mb-20">
+          <div className="max-w-2xl mb-10">
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
+              Preguntas frecuentes
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Lo que nuestros clientes nos preguntan
+            </h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            {[
+              { q: "¿Cuánto demora una visita técnica?", a: "Coordinamos visitas en menos de 48 horas en Lima y zonas aledañas, según urgencia." },
+              { q: "¿Atienden emergencias fuera de horario?", a: "Sí, contamos con guardia técnica 24/7 para paradas no programadas en sala de calderas." },
+              { q: "¿Trabajan con todas las marcas?", a: "Sí, intervenimos quemadores Weishaupt, Riello, Baltur, Bentone y calderas Cleaver-Brooks, Continental, Distral, entre otras." },
+              { q: "¿Pueden modernizar el control de mi caldera?", a: "Sí, somos especialistas Autoflame MK8/MK9 y también integramos PLC, variadores y telemetría." },
+            ].map((f) => (
+              <article key={f.q} className="rounded-3xl border border-border/70 bg-surface/70 p-6 panel-3d">
+                <h3 className="text-base font-semibold mb-2">{f.q}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+              </article>
+            ))}
           </div>
         </section>
 

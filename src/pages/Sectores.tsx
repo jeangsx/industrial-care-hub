@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Industries from "@/components/site/Industries";
 import Footer from "@/components/site/Footer";
-import heroSectores from "@/assets/hero-sectores-real.png";
+import heroSectores from "@/assets/hero-sectores-real.jpg";
 
 const Sectores = () => {
   useEffect(() => {
@@ -84,6 +84,31 @@ const Sectores = () => {
                 <div className="text-sm text-muted-foreground mt-2">Atención de emergencias en sala de calderas.</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Casos típicos por sector */}
+        <section className="mb-20">
+          <div className="max-w-2xl mb-10">
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
+              Casos típicos
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Soluciones que ya hemos resuelto
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              { t: "Conversión a GN en pesquera", d: "Migración de quemador residual a gas natural, mejora de combustión y reducción del 12% en costo de combustible." },
+              { t: "Repotenciamiento textil", d: "Cambio de tubos, refractario nuevo y trim de O₂ que recuperó la capacidad nominal de la caldera." },
+              { t: "Plan preventivo agroindustria", d: "Calendario anual de mantenimiento que llevó la disponibilidad de planta de 92% a 99.4%." },
+              { t: "Sala de calderas hotel", d: "Modernización de control y agua de alimentación para garantizar ACS y lavandería 24/7." },
+            ].map((c) => (
+              <article key={c.t} className="rounded-3xl border border-border/70 bg-surface/70 p-8 panel-3d">
+                <h3 className="text-xl font-semibold mb-3">{c.t}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{c.d}</p>
+              </article>
+            ))}
           </div>
         </section>
 

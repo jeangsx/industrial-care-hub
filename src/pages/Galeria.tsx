@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Footer from "@/components/site/Footer";
-import heroGaleria from "@/assets/hero-galeria-real.png";
+import heroGaleria from "@/assets/hero-galeria-real.jpg";
 import g1 from "@/assets/galeria-1.jpg";
 import g2 from "@/assets/galeria-2.jpg";
 import g3 from "@/assets/galeria-3.jpg";

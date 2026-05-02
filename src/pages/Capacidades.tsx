@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Services from "@/components/site/Services";
 import Footer from "@/components/site/Footer";
-import heroCapacidades from "@/assets/hero-capacidades-real.png";
+import heroCapacidades from "@/assets/hero-capacidades-real.jpg";
 
 const Capacidades = () => {
   useEffect(() => {
@@ -77,6 +77,36 @@ const Capacidades = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Procesos detallados */}
+        <section className="mb-20">
+          <div className="max-w-2xl mb-10">
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
+              Nuestras capacidades técnicas
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Intervenciones especializadas en sala de calderas
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {[
+              { t: "Cambio de tubos de fuego", d: "Retiro, mandrinado y soldadura certificada de tubos en calderas pirotubulares con prueba hidrostática." },
+              { t: "Reparación de espejos", d: "Recuperación de espejos deformados, recargue por soldadura y verificación dimensional." },
+              { t: "Refractarios y aislamientos", d: "Reparación de tapas, conos y forrado térmico de tuberías para minimizar pérdidas radiantes." },
+              { t: "Conversión a gas natural", d: "Adecuación de quemadores, tren de gas y certificación segura para operación dual o GN puro." },
+              { t: "Trim de O₂ y eficiencia", d: "Implementación de sondas de O₂, ajuste fino de mezcla aire-combustible y reducción de exceso de aire." },
+              { t: "Tableros eléctricos", d: "Diseño, fabricación y modernización de tableros con PLC, variadores y enclavamientos de seguridad." },
+              { t: "Sistemas de agua", d: "Ablandamiento, dosificación química, desgasificadores y bombas de presión constante." },
+              { t: "Líneas de vapor y condensado", d: "Diseño e instalación con trampas, purgadores y aislamiento certificado." },
+              { t: "Pruebas hidrostáticas", d: "Ensayos certificados de recipientes a presión con informes técnicos firmados." },
+            ].map((c) => (
+              <article key={c.t} className="rounded-3xl border border-border/70 bg-surface/70 p-6 panel-3d">
+                <h3 className="text-lg font-semibold mb-2">{c.t}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{c.d}</p>
+              </article>
+            ))}
           </div>
         </section>
 

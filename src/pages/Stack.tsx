@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import LogoMarquee from "@/components/site/LogoMarquee";
 import Footer from "@/components/site/Footer";
-import heroStack from "@/assets/hero-stack-real.png";
+import heroStack from "@/assets/hero-stack-real.jpg";
 
 const Stack = () => {
   useEffect(() => {
@@ -72,6 +72,35 @@ const Stack = () => {
                 <div className="text-sm text-muted-foreground mt-2">Especialistas certificados Autoflame.</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Marcas y categorías */}
+        <section className="mb-20">
+          <div className="max-w-2xl mb-10">
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
+              Marcas con las que trabajamos
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Stack de combustión y control
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              { t: "Autoflame", d: "MK8/MK9 servomotorizados, trim de O₂ y pantallas táctiles para gestión total de combustión." },
+              { t: "Weishaupt / Riello", d: "Quemadores monoetapa, modulantes y duales para gas, diesel y residual." },
+              { t: "Honeywell / Siemens", d: "Programadores LMV, válvulas de seguridad, presostatos y termocuplas." },
+              { t: "Cleaver-Brooks", d: "Calderas pirotubulares, repuestos originales y mantenimiento certificado." },
+              { t: "Spirax Sarco", d: "Trampas de vapor, válvulas reguladoras y accesorios de línea de vapor." },
+              { t: "Bentone / Baltur", d: "Quemadores compactos para uso comercial e industrial liviano." },
+              { t: "Pentair / Watts", d: "Tratamiento de agua, ablandadores y dosificación química." },
+              { t: "ABB / Schneider", d: "Variadores, contactores y componentes de tableros eléctricos." },
+            ].map((c) => (
+              <article key={c.t} className="rounded-3xl border border-border/70 bg-surface/70 p-6 panel-3d">
+                <h3 className="text-lg font-semibold mb-2">{c.t}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{c.d}</p>
+              </article>
+            ))}
           </div>
         </section>
 

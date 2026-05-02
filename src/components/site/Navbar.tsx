@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
-import logoEcc from "@/assets/logo-ecc.png";
+import logoEcc from "@/assets/logo-ecc-white.png";
 
 const links = [
   { to: "/capacidades", label: "Capacidades" },
@@ -38,14 +38,8 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
       <header className={headerClass}>
         <div className="container mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-3">
-            <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-12 w-auto" />
-            <div className="leading-tight hidden sm:block">
-            <div className="font-mono-ed text-sm tracking-tight font-semibold">ECC</div>
-            <div className="font-mono-ed text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              Energía Combustión Calorífica
-            </div>
-          </div>
-        </NavLink>
+            <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-10 sm:h-14 w-auto" />
+          </NavLink>
 
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (

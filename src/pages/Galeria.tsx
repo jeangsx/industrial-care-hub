@@ -96,15 +96,17 @@ const Galeria = () => {
             <X className="size-5" />
           </button>
           <figure
-            className="max-w-5xl w-full animate-scale-in"
+            className="max-w-4xl w-full max-h-[90vh] flex flex-col animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={items[active].src}
-              alt={items[active].title}
-              className="w-full h-auto rounded-2xl border border-border/70 shadow-deep"
-            />
-            <figcaption className="mt-4 text-center">
+            <div className="flex-1 min-h-0 flex items-center justify-center">
+              <img
+                src={items[active].src}
+                alt={items[active].title}
+                className="max-h-[70vh] w-auto max-w-full object-contain rounded-2xl border border-border/70 shadow-deep"
+              />
+            </div>
+            <figcaption className="mt-4 text-center shrink-0">
               <div className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-1">
                 {items[active].category}
               </div>

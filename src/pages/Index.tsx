@@ -40,6 +40,12 @@ const Index = () => {
             src={burnerHero}
             alt="Quemador industrial en funcionamiento"
             className="absolute inset-0 w-full h-full object-cover object-[55%_50%] animate-hero-pan"
+            loading="eager"
+            decoding="async"
+            // @ts-ignore
+            fetchpriority="high"
+            width={1600}
+            height={900}
           />
           <div className="absolute inset-0 bg-background/30" />
           <div className="absolute left-[55%] top-[48%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,184,90,0.34),transparent_45%)] blur-3xl opacity-95 animate-fire-flicker" />
@@ -47,17 +53,17 @@ const Index = () => {
         </div>
 
         <div className="relative z-10">
-          <section className="container mx-auto px-6 lg:px-10 pt-24 pb-32 max-w-5xl text-center">
+          <section className="container mx-auto px-4 sm:px-6 lg:px-10 pt-28 sm:pt-32 md:pt-40 pb-20 sm:pb-28 md:pb-32 max-w-5xl text-center">
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
               Energía Combustión Calorífica · ECC SAC
             </span>
-            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-5 sm:mb-6 text-balance">
               Soluciones térmicas industriales
               <span className="block text-primary text-glow font-light mt-2">
                 Calor confiable, producción imparable
               </span>
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto px-2">
               Transformamos el calor en productividad. Especialistas en
               reparación, mantenimiento preventivo y correctivo de calderas,
               quemadores, calentadores de aceite térmico y hornos.

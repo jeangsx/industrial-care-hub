@@ -81,7 +81,7 @@ const Servicios = () => {
           ].map((item, index) => (
             <article
               key={item.title}
-              className="group rounded-[2rem] border border-border/70 bg-surface/80 p-8 shadow-lg shadow-transparent transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:bg-background/80 hover:shadow-[0_30px_80px_-40px_rgba panel-3d(16,185,129,0.65)] animate-fade-up"
+              className="group rounded-[2rem] border border-border/70 bg-surface/80 p-6 sm:p-8 panel-3d animate-fade-up"
               style={{ animationDelay: `${index * 80}ms` }}
             >
               <div className="text-primary font-mono-ed text-[11px] uppercase tracking-[0.34em] mb-4">

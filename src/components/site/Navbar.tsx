@@ -62,6 +62,9 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
             <span className="size-1.5 rounded-full bg-primary animate-blink" />
             <span>SYS · ONLINE</span>
           </div>
+          <Button variant="outline" size="sm" asChild className="hidden sm:inline-flex">
+            <NavLink to="/galeria">Galería</NavLink>
+          </Button>
           <Button variant="editorial" size="sm" asChild>
             <NavLink to="/contacto">Iniciar</NavLink>
           </Button>

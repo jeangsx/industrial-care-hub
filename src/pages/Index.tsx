@@ -79,30 +79,30 @@ const Index = () => {
 
         {/* SOBRE NOSOTROS + GALERÍA */}
         <section id="sobre-nosotros" className="mb-24">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-stretch">
-            <div className="rounded-3xl border border-border/70 bg-surface/80 p-8 md:p-12 panel-3d">
-              <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-4">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start">
+            <div className="rounded-3xl border border-border/70 bg-surface/80 p-6 md:p-8 panel-3d">
+              <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
                 Sobre nosotros
               </span>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-5">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                 Tu socio en seguridad, eficiencia y confiabilidad térmica
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                 En Energía Combustión Calorífica ECC SAC transformamos el calor
                 en productividad. Nuestro compromiso es mantener tus procesos
                 funcionando con la máxima seguridad, eficiencia y confiabilidad,
                 ofreciendo soluciones a la medida respaldadas por un equipo
                 técnico altamente capacitado y con amplia experiencia.
               </p>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-3">
                 {[
                   { k: "+10", v: "Años de experiencia" },
                   { k: "6", v: "Sectores industriales" },
                   { k: "24/7", v: "Atención de emergencias" },
                 ].map((item) => (
-                  <div key={item.v} className="rounded-2xl bg-background/60 border border-border p-4">
-                    <div className="text-3xl font-semibold text-primary">{item.k}</div>
-                    <div className="text-xs text-muted-foreground mt-1 font-mono-ed uppercase tracking-wider">
+                  <div key={item.v} className="rounded-xl bg-background/60 border border-border p-3">
+                    <div className="text-2xl font-semibold text-primary">{item.k}</div>
+                    <div className="text-[10px] text-muted-foreground mt-1 font-mono-ed uppercase tracking-wider leading-tight">
                       {item.v}
                     </div>
                   </div>
@@ -110,10 +110,10 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-3">
-              <img src={processEngineer} alt="Ingeniero de planta junto a caldera térmica" className="w-full h-full object-cover rounded-2xl border border-border row-span-2" loading="lazy" />
-              <img src={processPipework} alt="Red de tuberías y conexiones de caldera" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
-              <img src={serviceDiagnostics} alt="Técnico analizándo combustion y controlado de caldera" className="w-full h-full object-cover rounded-2xl border border-border" loading="lazy" />
+            <div className="grid grid-cols-2 gap-3">
+              <img src={about1} alt="Operador en sala de control monitoreando calderas" className="w-full h-full object-cover rounded-2xl border border-border row-span-2 aspect-[3/4] sm:aspect-auto" loading="lazy" />
+              <img src={about2} alt="Manómetros y tuberías de caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" />
+              <img src={about3} alt="Técnico realizando soldadura industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" />
             </div>
           </div>
         </section>

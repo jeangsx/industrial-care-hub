@@ -107,20 +107,34 @@ const CompraVenta = () => {
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Cómo trabajamos</h3>
-              <ol className="space-y-4 text-muted-foreground text-sm leading-relaxed list-decimal list-inside">
-                <li>Analizamos tu solicitud para proponer la mejor opción de compra o venta.</li>
-                <li>Verificamos especificaciones, compatibilidad y disponibilidad de stock.</li>
-                <li>Entregamos propuesta técnica con plazo de entrega y condiciones de servicio.</li>
-                <li>Coordinamos instalación, pruebas y puesta en marcha si lo necesitas.</li>
-              </ol>
+              <ul className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+                {[
+                  "Analizamos tu solicitud para proponer la mejor opción de compra o venta.",
+                  "Verificamos especificaciones, compatibilidad y disponibilidad de stock.",
+                  "Entregamos propuesta técnica con plazo de entrega y condiciones de servicio.",
+                  "Coordinamos instalación, pruebas y puesta en marcha si lo necesitas.",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3">
+                    <span className="size-1.5 rounded-full bg-primary animate-blink mt-2 shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-4">Por qué elegir ECC</h3>
               <ul className="space-y-4 text-muted-foreground text-sm leading-relaxed">
-                <li>Experiencia en calderas y quemadores industriales con historial comprobado.</li>
-                <li>Asesoría técnica personalizada y selección de equipos según tu proceso.</li>
-                <li>Stock de repuestos y opciones de adquisición rápida.</li>
-                <li>Soporte postventa, instalación y mantenimiento preventivo.</li>
+                {[
+                  "Experiencia en calderas y quemadores industriales con historial comprobado.",
+                  "Asesoría técnica personalizada y selección de equipos según tu proceso.",
+                  "Stock de repuestos y opciones de adquisición rápida.",
+                  "Soporte postventa, instalación y mantenimiento preventivo.",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3">
+                    <span className="size-1.5 rounded-full bg-primary animate-blink mt-2 shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

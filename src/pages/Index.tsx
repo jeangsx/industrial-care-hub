@@ -14,6 +14,9 @@ import processPipework from "@/assets/process-pipework.jpg";
 import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
 import burnerRealFire from "@/assets/burner-real-fire.png";
+import about1 from "@/assets/about-1.jpg";
+import about2 from "@/assets/about-2.jpg";
+import about3 from "@/assets/about-3.jpg";
 
 const Index = () => {
   useEffect(() => {

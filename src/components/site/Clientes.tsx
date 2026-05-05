@@ -1,9 +1,14 @@
+import liguria from "@/assets/cliente-liguria.png";
+import indigo from "@/assets/cliente-indigo.png";
+import accalderas from "@/assets/cliente-accalderas.png";
+import imbarex from "@/assets/cliente-imbarex.png";
+
 const Clientes = () => {
   const clientes = [
-    "INVERSIONES PESQUERA LIGURIA",
-    "IMBAREX",
-    "INDIGO",
-    "AC CALDERAS",
+    { name: "Inversiones Pesqueras Liguria S.A.C", logo: liguria },
+    { name: "Imbarex", logo: imbarex },
+    { name: "Indigo", logo: indigo },
+    { name: "AC Calderas", logo: accalderas },
   ];
 
   return (
@@ -14,14 +19,20 @@ const Clientes = () => {
         </p>
       </div>
       <div className="relative">
-        <div className="flex marquee gap-20 whitespace-nowrap">
+        <div className="flex marquee gap-16 items-center whitespace-nowrap">
           {[...clientes, ...clientes, ...clientes].map((cliente, i) => (
-            <span
+            <div
               key={i}
-              className="font-mono-ed text-base md:text-lg tracking-[0.18em] text-muted-foreground/70 hover:text-primary transition-colors"
+              className="shrink-0 h-20 md:h-24 flex items-center justify-center px-4"
+              title={cliente.name}
             >
-              {cliente}
-            </span>
+              <img
+                src={cliente.logo}
+                alt={cliente.name}
+                className="h-full w-auto max-w-[180px] md:max-w-[220px] object-contain bg-white rounded-lg p-2 grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       </div>

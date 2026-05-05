@@ -5,10 +5,10 @@ import imbarex from "@/assets/cliente-imbarex.png";
 
 const Clientes = () => {
   const clientes = [
-    { name: "Inversiones Pesqueras Liguria S.A.C", logo: liguria },
-    { name: "Imbarex", logo: imbarex },
-    { name: "Indigo", logo: indigo },
-    { name: "AC Calderas", logo: accalderas },
+    { name: "Inversiones Pesqueras Liguria S.A.C", logo: liguria, fill: true },
+    { name: "Imbarex", logo: imbarex, fill: false },
+    { name: "Indigo", logo: indigo, fill: true },
+    { name: "AC Calderas", logo: accalderas, fill: true },
   ];
 
   return (
@@ -23,13 +23,17 @@ const Clientes = () => {
           {[...clientes, ...clientes, ...clientes].map((cliente, i) => (
             <div
               key={i}
-              className="shrink-0 w-48 md:w-56 h-24 md:h-28 flex items-center justify-center bg-white rounded-xl p-2 border border-border/60 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+              className="shrink-0 w-48 md:w-56 h-24 md:h-28 flex items-center justify-center bg-white rounded-xl border border-border/60 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
               title={cliente.name}
             >
               <img
                 src={cliente.logo}
                 alt={cliente.name}
-                className="w-full h-full object-contain scale-110"
+                className={
+                  cliente.fill
+                    ? "w-full h-full object-cover"
+                    : "max-w-full max-h-full object-contain p-2 scale-110"
+                }
                 loading="lazy"
               />
             </div>

@@ -19,21 +19,17 @@ const Clientes = () => {
         </p>
       </div>
       <div className="relative">
-        <div className="flex marquee gap-16 items-center whitespace-nowrap">
-          {[...clientes, ...clientes, ...clientes].map((cliente, i) => (
+        <div className="flex marquee gap-10 md:gap-14 items-center whitespace-nowrap w-max">
+          {[...clientes, ...clientes].map((cliente, i) => (
             <div
               key={i}
-              className="shrink-0 w-48 md:w-56 h-24 md:h-28 flex items-center justify-center bg-white rounded-xl border border-border/60 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+              className="shrink-0 w-44 md:w-52 h-24 md:h-28 flex items-center justify-center bg-white rounded-xl border border-border/60 shadow-sm hover:shadow-md transition-shadow overflow-hidden p-3"
               title={cliente.name}
             >
               <img
                 src={cliente.logo}
                 alt={cliente.name}
-                className={
-                  cliente.fill
-                    ? "w-full h-full object-cover"
-                    : "max-w-full max-h-full object-contain p-2 scale-110"
-                }
+                className="max-w-full max-h-full w-auto h-auto object-contain"
                 loading="lazy"
               />
             </div>

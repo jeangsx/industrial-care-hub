@@ -23,13 +23,13 @@ const Clientes = () => {
           {[...clientes, ...clientes, ...clientes].map((cliente, i) => (
             <div
               key={i}
-              className="shrink-0 h-20 md:h-24 flex items-center justify-center px-4"
+              className="shrink-0 w-44 md:w-52 h-24 md:h-28 flex items-center justify-center bg-white rounded-xl p-3 border border-border/60 shadow-sm hover:shadow-md transition-shadow"
               title={cliente.name}
             >
               <img
                 src={cliente.logo}
                 alt={cliente.name}
-                className="h-full w-auto max-w-[180px] md:max-w-[220px] object-contain bg-white rounded-lg p-2 grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100"
+                className="max-h-full max-w-full object-contain"
                 loading="lazy"
               />
             </div>

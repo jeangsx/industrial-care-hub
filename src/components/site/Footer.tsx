@@ -1,4 +1,4 @@
-import { Activity } from "lucide-react";
+import logoEcc from "@/assets/logo-ecc-white.png";
 
 const Footer = () => {
   return (
@@ -6,11 +6,18 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-10">
         <div className="grid md:grid-cols-12 gap-10 mb-12">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="size-9 rounded-md border border-primary/60 grid place-items-center bg-primary/5">
-                <Activity className="size-4 text-primary" strokeWidth={2.2} />
+            <div className="flex items-center gap-4 mb-5">
+              <img
+                src={logoEcc}
+                alt="Logo ECC SAC"
+                className="h-14 w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
+              />
+              <div className="flex flex-col">
+                <span className="font-mono-ed text-sm font-semibold tracking-tight">ECC SAC</span>
+                <span className="font-mono-ed text-[10px] uppercase tracking-[0.25em] text-primary/80">
+                  Energía · Combustión · Calorífica
+                </span>
               </div>
-              <span className="font-mono-ed text-sm font-semibold tracking-tight">ECC SAC</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
               Energía Combustión Calorífica · Soluciones térmicas industriales:

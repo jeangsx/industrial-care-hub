@@ -127,27 +127,27 @@ const Index = () => {
 
         {/* GALERÍA */}
         <section id="galeria" className="mb-8">
-          <div className="flex items-end justify-between gap-6 mb-8 flex-wrap">
-            <div>
-              <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
-                Galería
-              </span>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-                Trabajos en campo
-              </h2>
-            </div>
-            <a
-              href="/galeria"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-mono-ed text-xs uppercase tracking-[0.2em] shadow-glow hover:opacity-90 transition-opacity"
-            >
-              Ver galería completa
-              <span aria-hidden>↗</span>
-            </a>
+          <div className="mb-8">
+            <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-3">
+              Galería
+            </span>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Trabajos en campo
+            </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[processEngineer, serviceMaintenance, burnerRealFire, processPipework].slice(0, 4).map((img, i) => (
               <img key={i} src={img} alt={`Trabajo de mantenimiento térmico ECC ${i + 1}`} className="w-full aspect-square object-cover rounded-2xl border border-border hover:opacity-80 transition-opacity" loading="lazy" />
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <a
+              href="/galeria"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-primary-foreground font-mono-ed text-xs uppercase tracking-[0.2em] shadow-glow hover:opacity-90 transition-opacity"
+            >
+              Ver galería completa
+              <span aria-hidden>↗</span>
+            </a>
           </div>
         </section>
 

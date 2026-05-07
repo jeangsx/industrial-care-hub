@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 import logoEcc from "@/assets/logo-ecc-white.png";
 
 const links = [
@@ -19,6 +21,7 @@ interface NavbarProps {
 
 const Navbar = ({ overlayHero = false }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 12);
@@ -27,49 +30,83 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const headerClass = overlayHero
-    ? isScrolled
-      ? "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/30 shadow-sm transition-all duration-300"
-      : "fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-transparent backdrop-blur-0 shadow-none transition-all duration-300"
-    : "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/40 backdrop-blur-md supports-[backdrop-filter]:bg-background/30 shadow-sm transition-all duration-300";
+  // Always use a solid backdrop so menu links are readable on every page,
+  // including when scrolling over light/photo backgrounds.
+  const headerClass = overlayHero && !isScrolled
+    ? "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-background/50 shadow-sm transition-all duration-300"
+    : "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/90 backdrop-blur-md supports-[backdrop-filter]:bg-background/75 shadow-sm transition-all duration-300";
 
   return (
     <>
       <header className={headerClass}>
-        <div className="container mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
-          <NavLink to="/" className="flex items-center gap-3">
-            <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-10 sm:h-14 w-auto" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between">
+          <NavLink to="/" className="flex items-center gap-3 shrink-0">
+            <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-9 sm:h-12 w-auto" />
           </NavLink>
 
-        <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                `font-mono-ed text-xs uppercase tracking-[0.22em] transition-colors ${
-                  isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
-                }`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
-        </nav>
+          <nav className="hidden lg:flex items-center gap-7">
+            {links.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) =>
+                  `font-mono-ed text-xs uppercase tracking-[0.22em] transition-colors ${
+                    isActive ? "text-primary" : "text-foreground/90 hover:text-primary"
+                  }`
+                }
+              >
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
 
-        <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2 font-mono-ed text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-            <span className="size-1.5 rounded-full bg-primary animate-blink" />
-            <span>SYS · ONLINE</span>
+          <div className="flex items-center gap-3">
+            <div className="hidden xl:flex items-center gap-2 font-mono-ed text-[11px] uppercase tracking-[0.22em] text-foreground/70">
+              <span className="size-1.5 rounded-full bg-primary animate-blink" />
+              <span>SYS · ONLINE</span>
+            </div>
+            <Button variant="editorial" size="sm" asChild className="hidden sm:inline-flex">
+              <NavLink to="/contacto">Iniciar</NavLink>
+            </Button>
+
+            {/* Mobile menu */}
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+              <SheetTrigger asChild>
+                <button
+                  aria-label="Abrir menú"
+                  className="lg:hidden inline-flex items-center justify-center size-10 rounded-md border border-border bg-background/70 text-foreground hover:text-primary"
+                >
+                  <Menu className="size-5" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[80vw] max-w-xs bg-background">
+                <nav className="mt-10 flex flex-col gap-1">
+                  {links.map((l) => (
+                    <NavLink
+                      key={l.to}
+                      to={l.to}
+                      onClick={() => setMobileOpen(false)}
+                      className={({ isActive }) =>
+                        `font-mono-ed text-sm uppercase tracking-[0.2em] py-3 px-2 rounded-md transition-colors ${
+                          isActive
+                            ? "text-primary bg-primary/10"
+                            : "text-foreground hover:text-primary hover:bg-accent"
+                        }`
+                      }
+                    >
+                      {l.label}
+                    </NavLink>
+                  ))}
+                  <Button variant="hero" asChild className="mt-6">
+                    <NavLink to="/contacto" onClick={() => setMobileOpen(false)}>
+                      Iniciar
+                    </NavLink>
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
-          <Button variant="outline" size="sm" asChild className="hidden sm:inline-flex">
-            <NavLink to="/galeria">Galería</NavLink>
-          </Button>
-          <Button variant="editorial" size="sm" asChild>
-            <NavLink to="/contacto">Iniciar</NavLink>
-          </Button>
         </div>
-      </div>
       </header>
       {!overlayHero && (
         <>

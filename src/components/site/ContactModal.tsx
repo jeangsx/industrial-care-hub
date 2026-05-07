@@ -25,16 +25,34 @@ const ContactModal = ({ trigger, title = "Solicitar servicio" }: ContactModalPro
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  const contactText = `Hola, me interesa solicitar una venta o visita técnica.%0A%0ANombre: ${nombre}%0AEmpresa: ${empresa}%0ATeléfono: ${telefono}%0AEmail: ${email}%0A%0A${mensaje}`;
-  const emailBody = `Hola,%0A%0ANombre: ${nombre}%0AEmpresa: ${empresa}%0ATeléfono: ${telefono}%0AEmail: ${email}%0A%0A${mensaje}`;
+  const professionalMessage = `Estimado equipo de ECC SAC,
 
-  const openWhatsApp = () => {
-    window.open(`https://wa.me/51938154638?text=${encodeURIComponent(contactText)}`, "_blank");
-    setOpen(false);
-  };
+Me pongo en contacto con ustedes para solicitar información sobre sus servicios térmicos industriales y coordinar una posible venta o visita técnica.
 
-  const openEmail = () => {
-    window.location.href = `mailto:ericksoria@calderas-ecc.com?subject=${encodeURIComponent("Solicitud de venta / visita técnica")}&body=${encodeURIComponent(emailBody)}`;
+A continuación mis datos de contacto:
+• Nombre: ${nombre || "—"}
+• Empresa: ${empresa || "—"}
+• Teléfono: ${telefono || "—"}
+• Email: ${email || "—"}
+
+Detalle de la solicitud:
+${mensaje || "—"}
+
+Quedo atento a su respuesta para coordinar los siguientes pasos.
+
+Saludos cordiales.`;
+
+  const sendBoth = () => {
+    // Abre WhatsApp en una pestaña nueva y dispara el correo en paralelo
+    window.open(
+      `https://wa.me/51938154638?text=${encodeURIComponent(professionalMessage)}`,
+      "_blank",
+    );
+    setTimeout(() => {
+      window.location.href = `mailto:ericksoria@calderas-ecc.com?subject=${encodeURIComponent(
+        "Solicitud de venta / visita técnica",
+      )}&body=${encodeURIComponent(professionalMessage)}`;
+    }, 300);
     setOpen(false);
   };
 
@@ -113,17 +131,14 @@ const ContactModal = ({ trigger, title = "Solicitar servicio" }: ContactModalPro
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Button variant="hero" className="flex-1" type="button" onClick={openWhatsApp}>
-            Enviar WhatsApp
-          </Button>
-          <Button variant="outline" className="flex-1" type="button" onClick={openEmail}>
-            Enviar correo
+        <div className="mt-6">
+          <Button variant="hero" className="w-full" type="button" onClick={sendBoth}>
+            Enviar solicitud (WhatsApp + Correo)
           </Button>
         </div>
 
         <div className="mt-4 text-xs text-muted-foreground">
-          También puedes copiar el número o el correo y escribir directamente en tu aplicación preferida.
+          Tu solicitud se enviará simultáneamente por WhatsApp y por correo a nuestro equipo técnico.
         </div>
 
         <div className="mt-4 flex justify-end">

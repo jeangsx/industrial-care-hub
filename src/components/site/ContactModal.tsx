@@ -2,6 +2,7 @@ import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { openExternalLink } from "@/lib/open-external-link";
 import {
   Dialog,
   DialogClose,
@@ -48,22 +49,10 @@ Saludos cordiales.`;
     const waUrl = `https://wa.me/51938154638?text=${body}`;
     const mailUrl = `mailto:ericksoria@calderas-ecc.com?subject=${subject}&body=${body}`;
 
-    // WhatsApp: anchor click evita el bloqueo de pop-ups
-    const a = document.createElement("a");
-    a.href = waUrl;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    openExternalLink(waUrl);
 
-    // Correo: iframe oculto para no abandonar la página
     setTimeout(() => {
-      const iframe = document.createElement("iframe");
-      iframe.style.display = "none";
-      iframe.src = mailUrl;
-      document.body.appendChild(iframe);
-      setTimeout(() => iframe.remove(), 2000);
+      window.location.href = mailUrl;
     }, 400);
 
     setOpen(false);

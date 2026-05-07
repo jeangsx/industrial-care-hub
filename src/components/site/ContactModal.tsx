@@ -43,16 +43,21 @@ Quedo atento a su respuesta para coordinar los siguientes pasos.
 Saludos cordiales.`;
 
   const sendBoth = () => {
-    // Abre WhatsApp en una pestaña nueva y dispara el correo en paralelo
-    window.open(
-      `https://wa.me/51938154638?text=${encodeURIComponent(professionalMessage)}`,
-      "_blank",
-    );
-    setTimeout(() => {
-      window.location.href = `mailto:ericksoria@calderas-ecc.com?subject=${encodeURIComponent(
-        "Solicitud de venta / visita técnica",
-      )}&body=${encodeURIComponent(professionalMessage)}`;
-    }, 300);
+    const subject = encodeURIComponent("Solicitud de venta / visita técnica");
+    const body = encodeURIComponent(professionalMessage);
+    const waUrl = `https://wa.me/51938154638?text=${body}`;
+    const mailUrl = `mailto:ericksoria@calderas-ecc.com?subject=${subject}&body=${body}`;
+
+    // WhatsApp en pestaña nueva
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+
+    // Correo via iframe oculto para no abandonar la página
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = mailUrl;
+    document.body.appendChild(iframe);
+    setTimeout(() => iframe.remove(), 2000);
+
     setOpen(false);
   };
 
@@ -131,9 +136,9 @@ Saludos cordiales.`;
           </div>
         </div>
 
-        <div className="mt-6">
-          <Button variant="hero" className="w-full" type="button" onClick={sendBoth}>
-            Enviar solicitud (WhatsApp + Correo)
+        <div className="mt-6 flex justify-center">
+          <Button variant="hero" size="sm" type="button" onClick={sendBoth} className="px-5">
+            Enviar solicitud
           </Button>
         </div>
 

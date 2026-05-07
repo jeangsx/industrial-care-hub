@@ -136,9 +136,9 @@ Saludos cordiales.`;
           </div>
         </div>
 
-        <div className="mt-6">
-          <Button variant="hero" className="w-full" type="button" onClick={sendBoth}>
-            Enviar solicitud (WhatsApp + Correo)
+        <div className="mt-6 flex justify-center">
+          <Button variant="hero" size="sm" type="button" onClick={sendBoth} className="px-5">
+            Enviar solicitud
           </Button>
         </div>
 

@@ -10,6 +10,8 @@ const Footer = () => {
               <img
                 src={logoEcc}
                 alt="Logo ECC SAC"
+                loading="lazy"
+                decoding="async"
                 className="h-14 w-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
               />
               <div className="flex flex-col">

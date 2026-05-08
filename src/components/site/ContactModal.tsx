@@ -2,7 +2,6 @@ import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { openExternalLink } from "@/lib/open-external-link";
 import {
   Dialog,
   DialogClose,
@@ -46,26 +45,20 @@ Saludos cordiales.`;
   const sendBoth = () => {
     const subject = encodeURIComponent("Solicitud de venta / visita técnica");
     const body = encodeURIComponent(professionalMessage);
-    const waUrl = `https://wa.me/51938154638?text=${body}`;
     const mailUrl = `mailto:ericksoria@calderas-ecc.com?subject=${subject}&body=${body}`;
 
-    openExternalLink(waUrl);
-
-    setTimeout(() => {
-      window.location.href = mailUrl;
-    }, 400);
-
+    window.location.href = mailUrl;
     setOpen(false);
   };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-md">
+      <DialogContent className="max-w-md w-full sm:max-w-lg">
         <DialogHeader className="text-left">
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription className="pt-2">
-            Envía tu consulta directo a <span className="font-semibold">+51 938 154 638</span> o a <span className="font-semibold">ericksoria@calderas-ecc.com</span>.
+            Envía tu consulta directo a <span className="font-semibold">ericksoria@calderas-ecc.com</span>.
           </DialogDescription>
         </DialogHeader>
 
@@ -140,7 +133,7 @@ Saludos cordiales.`;
         </div>
 
         <div className="mt-4 text-xs text-muted-foreground">
-          Tu solicitud se enviará simultáneamente por WhatsApp y por correo a nuestro equipo técnico.
+          Tu solicitud se enviará por correo a nuestro equipo técnico.
         </div>
 
         <div className="mt-4 flex justify-end">

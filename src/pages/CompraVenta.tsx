@@ -34,6 +34,8 @@ const CompraVenta = () => {
             <img
               src={serviceDiagnostics}
               alt="Inspección técnica de caldera industrial"
+              loading="lazy"
+              decoding="async"
               className="h-80 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 animate-float-slow"
             />
             <div className="p-8">
@@ -51,6 +53,8 @@ const CompraVenta = () => {
             <img
               src={burnerRealFire}
               alt="Quemador industrial con flama brillante"
+              loading="lazy"
+              decoding="async"
               className="h-80 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 animate-float-slow"
             />
             <div className="p-8">

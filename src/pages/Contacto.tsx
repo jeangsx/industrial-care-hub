@@ -73,7 +73,7 @@ const Contacto = () => {
                 +51 938 154 638
               </p>
               <p className="text-sm font-semibold">Solicitud de visita técnica</p>
-              <p className="text-sm text-muted-foreground">Escríbenos por WhatsApp y coordinamos visita en menos de 48 horas.</p>
+              <p className="text-sm text-muted-foreground">Escríbenos a ericksoria@calderas-ecc.com y coordinamos visita en menos de 48 horas.</p>
             </div>
           </div>
         </section>

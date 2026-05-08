@@ -7,6 +7,7 @@ import Plans from "@/components/site/Plans";
 import Autoflame from "@/components/site/Autoflame";
 import WhyUs from "@/components/site/WhyUs";
 import Footer from "@/components/site/Footer";
+import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import burnerHero from "@/assets/burner-fire-hero.jpg";
 import processEngineer from "@/assets/process-engineer.jpg";
@@ -94,7 +95,7 @@ const Index = () => {
                 ofreciendo soluciones a la medida respaldadas por un equipo
                 técnico altamente capacitado y con amplia experiencia.
               </p>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
                   { k: "+10", v: "Años de experiencia" },
                   { k: "6", v: "Sectores industriales" },
@@ -141,13 +142,13 @@ const Index = () => {
             ))}
           </div>
           <div className="mt-8 flex justify-center">
-            <a
-              href="/galeria"
+            <NavLink
+              to="/galeria"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-primary-foreground font-mono-ed text-xs uppercase tracking-[0.2em] shadow-glow hover:opacity-90 transition-opacity"
             >
               Ver galería completa
               <span aria-hidden>↗</span>
-            </a>
+            </NavLink>
           </div>
         </section>
 

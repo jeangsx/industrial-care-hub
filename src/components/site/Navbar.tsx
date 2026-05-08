@@ -41,7 +41,13 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
       <header className={headerClass}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-3 shrink-0">
-            <img src={logoEcc} alt="Logo ECC - Energía Combustión Calorífica" className="h-9 sm:h-12 w-auto" />
+            <img
+              src={logoEcc}
+              alt="Logo ECC - Energía Combustión Calorífica"
+              loading="lazy"
+              decoding="async"
+              className="h-9 sm:h-12 w-auto"
+            />
           </NavLink>
 
           <nav className="hidden lg:flex items-center gap-7">

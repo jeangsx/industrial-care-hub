@@ -29,8 +29,9 @@ const Clientes = () => {
               <img
                 src={cliente.logo}
                 alt={cliente.name}
-                className="max-w-full max-h-full w-auto h-auto object-contain"
                 loading="lazy"
+                decoding="async"
+                className="max-w-full max-h-full w-auto h-auto object-contain"
               />
             </div>
           ))}

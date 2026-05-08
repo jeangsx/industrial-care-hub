@@ -57,6 +57,10 @@ const Galeria = () => {
   );
 
   useEffect(() => {
+    setActive(null);
+  }, [filter]);
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (active === null) return;
       if (e.key === "Escape") setActive(null);
@@ -106,13 +110,13 @@ const Galeria = () => {
           })}
         </div>
 
-        {/* Masonry grid */}
-        <section className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+        {/* Grid gallery */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((it, i) => (
             <button
               key={it.title}
               onClick={() => setActive(i)}
-              className="panel-3d group relative mb-6 block w-full break-inside-avoid overflow-hidden rounded-3xl border border-border/70 bg-surface/70 text-left"
+              className="panel-3d group relative overflow-hidden rounded-3xl border border-border/70 bg-surface/70 text-left"
             >
               <div className="overflow-hidden">
                 <img

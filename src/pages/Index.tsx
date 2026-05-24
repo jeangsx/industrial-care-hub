@@ -8,7 +8,7 @@ import Autoflame from "@/components/site/Autoflame";
 import WhyUs from "@/components/site/WhyUs";
 import Footer from "@/components/site/Footer";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import processEngineer from "@/assets/process-engineer.jpg";
 import processPipework from "@/assets/process-pipework.jpg";
 import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
@@ -19,6 +19,9 @@ import about2 from "@/assets/about-2.jpg";
 import about3 from "@/assets/about-3.jpg";
 
 const Index = () => {
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [showHeroVideo, setShowHeroVideo] = useState(false);
+
   useEffect(() => {
     document.title = "ECC SAC · Soluciones Térmicas Industriales · Calderas y Quemadores";
     const meta = document.querySelector('meta[name="description"]');
@@ -33,23 +36,68 @@ const Index = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const canUseVideo = () => {
+      const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const desktopViewport = window.matchMedia("(min-width: 768px)").matches;
+      return desktopViewport && !saveData && !reduceMotion;
+    };
+
+    const syncVideoAvailability = () => setShowHeroVideo(canUseVideo());
+    const viewportQuery = window.matchMedia("(min-width: 768px)");
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    syncVideoAvailability();
+    viewportQuery.addEventListener("change", syncVideoAvailability);
+    motionQuery.addEventListener("change", syncVideoAvailability);
+
+    return () => {
+      viewportQuery.removeEventListener("change", syncVideoAvailability);
+      motionQuery.removeEventListener("change", syncVideoAvailability);
+    };
+  }, []);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const syncPlayback = () => {
+      if (document.hidden) video.pause();
+      else video.play().catch(() => undefined);
+    };
+
+    syncPlayback();
+    document.addEventListener("visibilitychange", syncPlayback);
+
+    return () => {
+      document.removeEventListener("visibilitychange", syncPlayback);
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+    };
+  }, [showHeroVideo]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar overlayHero />
       {/* Volcanic backdrop covering hero */}
       <div className="relative isolate">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <video
-            className="absolute inset-0 h-full w-full object-cover object-[55%_50%] animate-hero-pan"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Quemador industrial en funcionamiento"
-          >
-            <source src="/videos/burner-fire.mp4" type="video/mp4" />
-          </video>
+          {showHeroVideo && (
+            <video
+              ref={heroVideoRef}
+              className="absolute inset-0 h-full w-full object-cover object-[55%_50%]"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Quemador industrial en funcionamiento"
+            >
+              <source src="/videos/burner-fire.mp4" type="video/mp4" />
+            </video>
+          )}
           <div className="absolute inset-0 bg-background/30" />
           <div className="absolute left-[55%] top-[48%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,184,90,0.34),transparent_45%)] blur-3xl opacity-95 animate-fire-flicker" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/15 to-background" />

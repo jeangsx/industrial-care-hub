@@ -8,7 +8,8 @@ import Autoflame from "@/components/site/Autoflame";
 import WhyUs from "@/components/site/WhyUs";
 import Footer from "@/components/site/Footer";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import burnerHero from "@/assets/burner-fire-hero.jpg";
 import processEngineer from "@/assets/process-engineer.jpg";
 import processPipework from "@/assets/process-pipework.jpg";
 import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
@@ -19,6 +20,9 @@ import about2 from "@/assets/about-2.jpg";
 import about3 from "@/assets/about-3.jpg";
 
 const Index = () => {
+  const [loadHeroVideo, setLoadHeroVideo] = useState(false);
+  const [heroVideoReady, setHeroVideoReady] = useState(false);
+
   useEffect(() => {
     document.title = "ECC SAC · Soluciones Térmicas Industriales · Calderas y Quemadores";
     const meta = document.querySelector('meta[name="description"]');
@@ -31,6 +35,22 @@ const Index = () => {
       m.content = content;
       document.head.appendChild(m);
     }
+
+    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (saveData || reduceMotion) return;
+
+    const loadVideo = () => setLoadHeroVideo(true);
+    const idleId =
+      "requestIdleCallback" in window
+        ? window.requestIdleCallback(loadVideo, { timeout: 1600 })
+        : undefined;
+    const timeoutId = window.setTimeout(loadVideo, 1200);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      if (idleId) window.cancelIdleCallback(idleId);
+    };
   }, []);
 
   return (
@@ -39,17 +59,33 @@ const Index = () => {
       {/* Volcanic backdrop covering hero */}
       <div className="relative isolate">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <video
-            className="absolute inset-0 w-full h-full object-cover object-[55%_50%] animate-hero-pan"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-label="Quemador industrial en funcionamiento"
-          >
-            <source src="/videos/burner-fire.mp4" type="video/mp4" />
-          </video>
+          <img
+            src={burnerHero}
+            alt=""
+            className={`absolute inset-0 h-full w-full object-cover object-[55%_50%] animate-hero-pan transition-opacity duration-700 ${
+              heroVideoReady ? "opacity-0" : "opacity-100"
+            }`}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
+          {loadHeroVideo && (
+            <video
+              className={`absolute inset-0 h-full w-full object-cover object-[55%_50%] animate-hero-pan transition-opacity duration-700 ${
+                heroVideoReady ? "opacity-100" : "opacity-0"
+              }`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={burnerHero}
+              aria-label="Quemador industrial en funcionamiento"
+              onCanPlay={() => setHeroVideoReady(true)}
+            >
+              <source src="/videos/burner-fire.mp4" type="video/mp4" />
+            </video>
+          )}
           <div className="absolute inset-0 bg-background/30" />
           <div className="absolute left-[55%] top-[48%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,184,90,0.34),transparent_45%)] blur-3xl opacity-95 animate-fire-flicker" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/15 to-background" />
@@ -111,9 +147,9 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <img src={about1} alt="Operador en sala de control monitoreando calderas" className="w-full h-full object-cover rounded-2xl border border-border row-span-2 aspect-[3/4] sm:aspect-auto" loading="lazy" />
-              <img src={about2} alt="Manómetros y tuberías de caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" />
-              <img src={about3} alt="Técnico realizando soldadura industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" />
+              <img src={about1} alt="Operador en sala de control monitoreando calderas" className="w-full h-full object-cover rounded-2xl border border-border row-span-2 aspect-[3/4] sm:aspect-auto" loading="lazy" decoding="async" />
+              <img src={about2} alt="Manómetros y tuberías de caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
+              <img src={about3} alt="Técnico realizando soldadura industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -137,7 +173,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[processEngineer, serviceMaintenance, burnerRealFire, processPipework].slice(0, 4).map((img, i) => (
-              <img key={i} src={img} alt={`Trabajo de mantenimiento térmico ECC ${i + 1}`} className="w-full aspect-square object-cover rounded-2xl border border-border hover:opacity-80 transition-opacity" loading="lazy" />
+              <img key={i} src={img} alt={`Trabajo de mantenimiento térmico ECC ${i + 1}`} className="w-full aspect-square object-cover rounded-2xl border border-border hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
             ))}
           </div>
           <div className="mt-8 flex justify-center">

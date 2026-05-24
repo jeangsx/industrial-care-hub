@@ -71,6 +71,7 @@ const Autoflame = () => {
                       alt={product.alt}
                       className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <figcaption className="pt-4">

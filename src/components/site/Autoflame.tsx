@@ -1,12 +1,28 @@
-import autoflameMk8 from "@/assets/autoflame-mk8.jpg";
-import autoflameMk9 from "@/assets/autoflame-mk9.jpg";
+import { Check } from "lucide-react";
+import autoflameMk8 from "@/assets/mk8.png";
+import autoflameMk9 from "@/assets/mk9.png";
+
+const products = [
+  {
+    src: autoflameMk8,
+    name: "MK8 MM",
+    alt: "Controlador Autoflame MK8 MM en tablero industrial",
+    desc: "Control de combustión servomotorizado",
+  },
+  {
+    src: autoflameMk9,
+    name: "MINI MK9 MM",
+    alt: "Controlador Autoflame MINI MK9 MM con pantalla de combustión",
+    desc: "Pantalla compacta para gestión total",
+  },
+];
 
 const Autoflame = () => {
   return (
     <section id="autoflame" className="mb-24">
       <div className="rounded-[2rem] border border-border/70 bg-surface/80 overflow-hidden">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="p-8 md:p-12">
+        <div className="grid lg:grid-cols-[1fr_0.95fr]">
+          <div className="p-8 md:p-10 xl:p-12">
             <div className="flex items-center gap-3 mb-5">
               <span className="font-mono-ed text-[10px] uppercase tracking-[0.3em] bg-primary/15 text-primary px-3 py-1 rounded-full">
                 AUTOFLAME®
@@ -32,25 +48,42 @@ const Autoflame = () => {
                 "Histórico y diagnóstico remoto",
                 "Cumplimiento ambiental certificado",
               ].map((f) => (
-                <li key={f} className="rounded-xl border border-border bg-background/60 px-4 py-3 text-foreground/90">
-                  {f}
+                <li
+                  key={f}
+                  className="group rounded-xl border border-border/70 bg-background/60 px-4 py-3 text-foreground/90 panel-3d flex items-start gap-3"
+                >
+                  <Check className="size-4 text-primary mt-0.5 shrink-0 transition-transform group-hover:scale-110" />
+                  <span>{f}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="grid grid-cols-2 bg-background/50">
-            <figure className="relative border-l border-border">
-              <img src={autoflameMk8} alt="Controlador Autoflame MK8 MM en tablero industrial" className="w-full h-full object-cover aspect-square" loading="lazy" />
-              <figcaption className="absolute bottom-0 inset-x-0 bg-background/85 backdrop-blur-sm px-4 py-2 font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary">
-                MK8 MM
-              </figcaption>
-            </figure>
-            <figure className="relative border-l border-border">
-              <img src={autoflameMk9} alt="Controlador Autoflame MINI MK9 MM con pantalla de combustión" className="w-full h-full object-cover aspect-square" loading="lazy" />
-              <figcaption className="absolute bottom-0 inset-x-0 bg-background/85 backdrop-blur-sm px-4 py-2 font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary">
-                MINI MK9 MM
-              </figcaption>
-            </figure>
+          <div className="border-t border-border bg-[radial-gradient(circle_at_50%_35%,hsl(var(--primary)/0.12),transparent_42%),linear-gradient(135deg,hsl(var(--background)/0.96),hsl(var(--surface)/0.82))] p-5 sm:p-6 lg:border-l lg:border-t-0 xl:p-8">
+            <div className="grid h-full content-center gap-5 sm:grid-cols-2">
+              {products.map((product) => (
+                <figure
+                  key={product.name}
+                  className="group rounded-3xl border border-border/70 bg-background/75 p-4 panel-3d"
+                >
+                  <div className="grid aspect-[1.12/1] place-items-center overflow-hidden rounded-2xl bg-white p-3 shadow-[inset_0_0_0_1px_rgba(15,23,42,0.08)]">
+                    <img
+                      src={product.src}
+                      alt={product.alt}
+                      className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="pt-4">
+                    <div className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary">
+                      {product.name}
+                    </div>
+                    <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                      {product.desc}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </div>

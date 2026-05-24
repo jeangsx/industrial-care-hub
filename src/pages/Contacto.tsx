@@ -54,7 +54,7 @@ const Contacto = () => {
             Conecta con nosotros
           </h2>
           <div className="grid gap-6 lg:grid-cols-2">
-            <div className="rounded-3xl border border-border p-8 bg-background/70">
+            <div className="rounded-3xl border border-border p-8 bg-background/70 panel-3d">
               <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
                 Oficina
               </div>
@@ -64,7 +64,7 @@ const Contacto = () => {
               <p className="text-sm font-semibold">Horario</p>
               <p className="text-sm text-muted-foreground">Lun – Sáb · 8:00 a 18:00 · Emergencias 24/7</p>
             </div>
-            <div className="rounded-3xl border border-border p-8 bg-background/70">
+            <div className="rounded-3xl border border-border p-8 bg-background/70 panel-3d">
               <div className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary mb-4">
                 Contacto directo
               </div>

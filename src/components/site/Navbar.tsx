@@ -33,7 +33,7 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
   // Always use a solid backdrop so menu links are readable on every page,
   // including when scrolling over light/photo backgrounds.
   const headerClass = overlayHero && !isScrolled
-    ? "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-background/50 shadow-sm transition-all duration-300"
+    ? "fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-transparent backdrop-blur-none transition-all duration-300"
     : "fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/90 backdrop-blur-md supports-[backdrop-filter]:bg-background/75 shadow-sm transition-all duration-300";
 
   return (

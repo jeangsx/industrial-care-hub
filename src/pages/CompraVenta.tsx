@@ -168,7 +168,7 @@ const CompraVenta = () => {
 
         <section className="rounded-3xl border border-border/70 bg-surface/80 p-10 mb-20 panel-3d">
           <div className="grid gap-6 lg:grid-cols-2">
-            <div className="rounded-3xl bg-background/70 border border-border p-8">
+            <div className="rounded-3xl bg-background/70 border border-border p-8 panel-3d">
               <h3 className="text-2xl font-semibold mb-4">Compra segura</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Si deseas vender equipos o repuestos, hacemos la propuesta de compra más justa basada en inspección técnica y condiciones reales del activo.
@@ -177,7 +177,7 @@ const CompraVenta = () => {
                 Pagos rápidos, condiciones transparentes y logística adaptada a tu planta.
               </p>
             </div>
-            <div className="rounded-3xl bg-background/70 border border-border p-8">
+            <div className="rounded-3xl bg-background/70 border border-border p-8 panel-3d">
               <h3 className="text-2xl font-semibold mb-4">Venta confiable</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Comercializamos equipos con soporte técnico y documentación de aplicación, para que tu planta tenga respaldo durante toda su operación.

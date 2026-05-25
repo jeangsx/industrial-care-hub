@@ -51,19 +51,19 @@ const CTA = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1.2fr] gap-px bg-border border border-border rounded-md overflow-hidden max-w-5xl">
             {[
-              { l: "SEDE", v: "Av. Metropolitana Mz G1 Lt 43, Ate – Lima" },
-              { l: "EMAIL", v: "ericksoria@calderas-ecc.com" },
-              { l: "TELÉFONOS", v: ["+51 972 316 786", "+51 938 154 638"] },
+              { l: "// SEDE", v: "Av. Metropolitana Mz G1 Lt 43, Ate – Lima" },
+              { l: "// EMAIL", v: "ericksoria@calderas-ecc.com" },
+              { l: "// TELÉFONOS", v: ["+51 972 316 786", "+51 938 154 638"] },
             ].map((b) => (
               <div key={b.l} className="bg-background/80 backdrop-blur-sm p-6">
                 <div className="flex items-center gap-3 font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-3">
-                  {(b.l === "EMAIL" || b.l === "TELÉFONOS" || b.l === "SEDE") && (
+                  {(b.l === "// EMAIL" || b.l === "// TELÉFONOS") && (
                     <span className="size-1.5 shrink-0 rounded-full bg-primary animate-blink" />
                   )}
                   {b.l}
                 </div>
                 {Array.isArray(b.v) ? (
-                  <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-foreground font-mono-ed">
+                  <div className="flex flex-col gap-2 text-sm text-foreground font-mono-ed">
                     {b.v.map((phone) => (
                       <a
                         key={phone}

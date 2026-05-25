@@ -18,11 +18,18 @@ import WhatsAppFloat from "./components/site/WhatsAppFloat";
 const queryClient = new QueryClient();
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
+    if (hash) {
+      window.requestAnimationFrame(() => {
+        document.querySelector(hash)?.scrollIntoView({ block: "start" });
+      });
+      return;
+    }
+
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, [pathname]);
+  }, [hash, pathname]);
 
   return null;
 };

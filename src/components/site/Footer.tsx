@@ -1,4 +1,8 @@
+import { Mail, MapPin, Phone, Globe2 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import logoEcc from "@/assets/logo-ecc-white.png";
+
+const footerLinkClass = "hover:text-primary transition-colors";
 
 const Footer = () => {
   return (
@@ -30,39 +34,51 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h4 className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-4">// Servicios</h4>
             <ul className="space-y-3 text-sm text-muted-foreground font-mono-ed">
-              <li><a href="#capacidades" className="hover:text-primary transition-colors">Mantenimiento</a></li>
-              <li><a href="#capacidades" className="hover:text-primary transition-colors">Quemadores</a></li>
-              <li><a href="#autoflame" className="hover:text-primary transition-colors">Autoflame®</a></li>
-              <li><a href="#capacidades" className="hover:text-primary transition-colors">Repuestos</a></li>
+              <li><NavLink to="/servicios" className={footerLinkClass}>Mantenimiento</NavLink></li>
+              <li><NavLink to="/servicios" className={footerLinkClass}>Quemadores</NavLink></li>
+              <li><NavLink to="/#autoflame" className={footerLinkClass}>Autoflame®</NavLink></li>
+              <li><NavLink to="/servicios" className={footerLinkClass}>Repuestos</NavLink></li>
             </ul>
           </div>
           <div className="md:col-span-2">
             <h4 className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-4">// Empresa</h4>
             <ul className="space-y-3 text-sm text-muted-foreground font-mono-ed">
-              <li><a href="#sectores" className="hover:text-primary transition-colors">Sectores</a></li>
-              <li><a href="#planes" className="hover:text-primary transition-colors">Planes</a></li>
-              <li><a href="#porque-elegirnos" className="hover:text-primary transition-colors">¿Por qué ECC?</a></li>
-              <li><a href="#contacto" className="hover:text-primary transition-colors">Contacto</a></li>
+              <li><NavLink to="/sectores" className={footerLinkClass}>Sectores</NavLink></li>
+              <li><NavLink to="/#planes" className={footerLinkClass}>Planes</NavLink></li>
+              <li><NavLink to="/#porque-elegirnos" className={footerLinkClass}>¿Por qué ECC?</NavLink></li>
+              <li><NavLink to="/contacto" className={footerLinkClass}>Contacto</NavLink></li>
             </ul>
           </div>
           <div className="md:col-span-3">
             <h4 className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-4">// Contacto</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground font-mono-ed">
-              <li>Av. Metropolitana Mz G1 Lt 43, Ate – Lima</li>
-              <li className="flex flex-wrap gap-x-4 gap-y-2">
-                <a href="tel:+51972316786" className="whitespace-nowrap hover:text-primary transition-colors">
-                  +51 972 316 786
-                </a>
-                <a href="tel:+51938154638" className="whitespace-nowrap hover:text-primary transition-colors">
-                  +51 938 154 638
-                </a>
+            <ul className="space-y-4 text-sm text-muted-foreground font-mono-ed">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+                <span>Av. Metropolitana Mz G1 Lt 43, Ate – Lima</span>
               </li>
-              <li>
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 size-4 shrink-0 text-primary" />
+                <div className="flex flex-col gap-2">
+                  <a href="tel:+51972316786" className="whitespace-nowrap hover:text-primary transition-colors">
+                    +51 972 316 786
+                  </a>
+                  <a href="tel:+51938154638" className="whitespace-nowrap hover:text-primary transition-colors">
+                    +51 938 154 638
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="mt-0.5 size-4 shrink-0 text-primary" />
                 <a href="mailto:ericksoria@calderas-ecc.com" className="break-all hover:text-primary transition-colors">
                   ericksoria@calderas-ecc.com
                 </a>
               </li>
-              <li>www.calderas-ecc.com</li>
+              <li className="flex items-start gap-3">
+                <Globe2 className="mt-0.5 size-4 shrink-0 text-primary" />
+                <a href="https://www.calderas-ecc.com" className="break-all hover:text-primary transition-colors">
+                  www.calderas-ecc.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>

@@ -49,9 +49,19 @@ const Footer = () => {
             <h4 className="font-mono-ed text-[10px] uppercase tracking-[0.3em] text-primary mb-4">// Contacto</h4>
             <ul className="space-y-3 text-sm text-muted-foreground font-mono-ed">
               <li>Av. Metropolitana Mz G1 Lt 43, Ate – Lima</li>
-              <li>+51 972 316 786 
-                 +51 938 154 638</li>
-              <li>ericksoria@calderas-ecc.com</li>
+              <li className="flex flex-wrap gap-x-4 gap-y-2">
+                <a href="tel:+51972316786" className="whitespace-nowrap hover:text-primary transition-colors">
+                  +51 972 316 786
+                </a>
+                <a href="tel:+51938154638" className="whitespace-nowrap hover:text-primary transition-colors">
+                  +51 938 154 638
+                </a>
+              </li>
+              <li>
+                <a href="mailto:ericksoria@calderas-ecc.com" className="break-all hover:text-primary transition-colors">
+                  ericksoria@calderas-ecc.com
+                </a>
+              </li>
               <li>www.calderas-ecc.com</li>
             </ul>
           </div>

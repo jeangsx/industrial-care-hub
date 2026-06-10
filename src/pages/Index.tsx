@@ -14,9 +14,9 @@ import processPipework from "@/assets/process-pipework.jpg";
 import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
 import burnerRealFire from "@/assets/burner-real-fire.png";
-import about1 from "@/assets/about-1.jpg";
-import about2 from "@/assets/about-2.jpg";
-import about3 from "@/assets/about-3.jpg";
+import about1 from "@/assets/about-1.webp";
+import about2 from "@/assets/about-2.webp";
+import about3 from "@/assets/about-3.webp";
 
 const Index = () => {
   const heroVideoRef = useRef<HTMLVideoElement>(null);
@@ -159,9 +159,9 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <img src={about1} alt="Operador en sala de control monitoreando calderas" className="w-full h-full object-cover rounded-2xl border border-border row-span-2 aspect-[3/4] sm:aspect-auto" loading="lazy" decoding="async" />
-              <img src={about2} alt="Manómetros y tuberías de caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
-              <img src={about3} alt="Técnico realizando soldadura industrial" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
+              <img src={about1} alt="Técnico realizando soldadura en el interior de una caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border row-span-2 aspect-[3/4] sm:aspect-auto" loading="lazy" decoding="async" />
+              <img src={about2} alt="Detalle de quemador y tuberías de caldera" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
+              <img src={about3} alt="Quemador industrial en caldera" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>

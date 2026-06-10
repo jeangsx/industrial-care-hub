@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
-import autoflameMk8 from "@/assets/mk8.png";
-import autoflameMk9 from "@/assets/mk9.png";
+import autoflameMk8 from "@/assets/mk8.jpg";
+import autoflameMk9 from "@/assets/mk9.webp";
 
 const products = [
   {
@@ -65,11 +65,11 @@ const Autoflame = () => {
                   key={product.name}
                   className="group rounded-3xl border border-border/70 bg-background/75 p-4 panel-3d"
                 >
-                  <div className="grid aspect-[1.12/1] place-items-center overflow-hidden rounded-2xl bg-white p-3 shadow-[inset_0_0_0_1px_rgba(15,23,42,0.08)]">
+                  <div className="grid aspect-[1.12/1] place-items-center overflow-hidden rounded-2xl bg-white shadow-[inset_0_0_0_1px_rgba(15,23,42,0.08)]">
                     <img
                       src={product.src}
                       alt={product.alt}
-                      className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                       loading="lazy"
                       decoding="async"
                     />

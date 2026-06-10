@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logoEcc from "@/assets/logo-ecc-white.png";
+import logoEcc from "@/assets/logo-ecc-new.png";
 
 const links = [
   { to: "/capacidades", label: "Capacidades" },

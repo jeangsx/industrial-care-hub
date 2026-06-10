@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone, Globe2 } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import logoEcc from "@/assets/logo-ecc-white.png";
+import logoEcc from "@/assets/logo-ecc-new.png";
 
 const footerLinkClass = "hover:text-primary transition-colors";
 

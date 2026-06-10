@@ -46,7 +46,7 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
               alt="Logo ECC - Energía Combustión Calorífica"
               loading="lazy"
               decoding="async"
-              className="h-9 sm:h-12 w-auto"
+              className="h-16 sm:h-20 w-auto"
             />
           </NavLink>
 

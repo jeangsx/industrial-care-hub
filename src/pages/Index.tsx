@@ -40,20 +40,16 @@ const Index = () => {
     const canUseVideo = () => {
       const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const desktopViewport = window.matchMedia("(min-width: 768px)").matches;
-      return desktopViewport && !saveData && !reduceMotion;
+      return !saveData && !reduceMotion;
     };
 
     const syncVideoAvailability = () => setShowHeroVideo(canUseVideo());
-    const viewportQuery = window.matchMedia("(min-width: 768px)");
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     syncVideoAvailability();
-    viewportQuery.addEventListener("change", syncVideoAvailability);
     motionQuery.addEventListener("change", syncVideoAvailability);
 
     return () => {
-      viewportQuery.removeEventListener("change", syncVideoAvailability);
       motionQuery.removeEventListener("change", syncVideoAvailability);
     };
   }, []);

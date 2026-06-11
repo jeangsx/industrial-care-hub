@@ -75,8 +75,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Globe2 className="mt-0.5 size-4 shrink-0 text-primary" />
-                <a href="https://www.calderas-ecc.com" className="break-all hover:text-primary transition-colors">
-                  www.calderas-ecc.com
+                <a href="http://calderas-ecc.com" className="break-all hover:text-primary transition-colors">
+                  calderas-ecc.com
                 </a>
               </li>
             </ul>

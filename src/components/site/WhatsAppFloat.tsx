@@ -8,10 +8,8 @@ const WhatsAppFloat = () => {
   return (
     <a
       href={href}
-      onClick={(e) => {
-        e.preventDefault();
-        window.location.href = href;
-      }}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Escríbenos por WhatsApp"
       className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 group"
     >

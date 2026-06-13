@@ -31,25 +31,6 @@ const Servicios = () => {
       />
       <main className="container mx-auto px-6 lg:px-10 py-16">
         <section className="max-w-5xl mx-auto mb-16 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <ContactModal
-              title="Solicitar visita técnica"
-              trigger={
-                <Button variant="hero" size="xl" className="min-w-[200px]">
-                  Solicitar visita técnica
-                </Button>
-              }
-            />
-
-            <a href="https://wa.me/51941388698" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <Button variant="outline" size="lg" className="h-14 px-6">
-                <span className="text-sm">
-                  <div className="font-mono-ed text-[10px] uppercase tracking-[0.2em] text-primary mb-1">Chat directo</div>
-                  <div className="font-semibold">+51 941 388 698</div>
-                </span>
-              </Button>
-            </a>
-          </div>
         </section>
 
         <section className="grid gap-6 lg:grid-cols-2 mb-20">

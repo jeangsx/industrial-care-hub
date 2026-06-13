@@ -136,13 +136,7 @@ Saludos cordiales.`;
           Tu solicitud se enviará por correo a nuestro equipo técnico.
         </div>
 
-        <div className="mt-2 flex justify-end">
-          <DialogClose asChild>
-            <Button variant="secondary" size="sm" type="button">
-              Cerrar
-            </Button>
-          </DialogClose>
-        </div>
+
       </DialogContent>
     </Dialog>
   );

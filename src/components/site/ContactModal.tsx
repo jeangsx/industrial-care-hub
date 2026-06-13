@@ -95,7 +95,7 @@ Saludos cordiales.`;
               id="modal-telefono"
               value={telefono}
               onChange={(event) => setTelefono(event.target.value)}
-              placeholder=""
+              placeholder="Teléfono"
               className="mt-1 h-9"
             />
           </div>

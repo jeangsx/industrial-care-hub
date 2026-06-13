@@ -67,10 +67,6 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div className="hidden xl:flex items-center gap-2 font-mono-ed text-[11px] uppercase tracking-[0.22em] text-foreground/70">
-              <span className="size-1.5 rounded-full bg-primary animate-blink" />
-              <span>SYS · ONLINE</span>
-            </div>
 
             {/* Mobile menu */}
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>

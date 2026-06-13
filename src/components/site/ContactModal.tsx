@@ -54,7 +54,7 @@ Saludos cordiales.`;
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="!max-w-[440px] w-full">
+      <DialogContent className="!max-w-[440px] w-full max-h-[94vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader className="text-left">
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription className="pt-1">
@@ -62,7 +62,7 @@ Saludos cordiales.`;
           </DialogDescription>
         </DialogHeader>
 
-        <div className="mt-5 space-y-3">
+        <div className="mt-3 sm:mt-5 space-y-2 sm:space-y-3">
           <div>
             <Label htmlFor="modal-nombre" className="text-xs">
               Nombre
@@ -72,7 +72,7 @@ Saludos cordiales.`;
               value={nombre}
               onChange={(event) => setNombre(event.target.value)}
               placeholder="Tu nombre"
-              className="mt-1 h-9"
+              className="mt-0.5 sm:mt-1 h-8 sm:h-9"
             />
           </div>
           <div>
@@ -84,7 +84,7 @@ Saludos cordiales.`;
               value={empresa}
               onChange={(event) => setEmpresa(event.target.value)}
               placeholder="Nombre de empresa"
-              className="mt-1 h-9"
+              className="mt-0.5 sm:mt-1 h-8 sm:h-9"
             />
           </div>
           <div>
@@ -96,7 +96,7 @@ Saludos cordiales.`;
               value={telefono}
               onChange={(event) => setTelefono(event.target.value)}
               placeholder="Teléfono"
-              className="mt-1 h-9"
+              className="mt-0.5 sm:mt-1 h-8 sm:h-9"
             />
           </div>
           <div>
@@ -109,7 +109,7 @@ Saludos cordiales.`;
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               placeholder="correo@empresa.com"
-              className="mt-1 h-9"
+              className="mt-0.5 sm:mt-1 h-8 sm:h-9"
             />
           </div>
           <div>
@@ -120,19 +120,19 @@ Saludos cordiales.`;
               id="modal-mensaje"
               value={mensaje}
               onChange={(event) => setMensaje(event.target.value)}
-              className="w-full min-h-[96px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
+              className="w-full min-h-[72px] sm:min-h-[96px] rounded-md border border-input bg-background px-3 py-1.5 sm:py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
               placeholder="Describe tu solicitud o nos cuentas qué necesitas"
             />
           </div>
         </div>
 
-        <div className="mt-5 flex justify-center">
+        <div className="mt-4 sm:mt-5 flex justify-center">
           <Button variant="hero" size="sm" type="button" onClick={sendBoth} className="px-5">
             Enviar solicitud
           </Button>
         </div>
 
-        <div className="mt-4 text-xs text-muted-foreground">
+        <div className="mt-3 sm:mt-4 text-xs text-muted-foreground text-center sm:text-left">
           Tu solicitud se enviará por correo a nuestro equipo técnico.
         </div>
 

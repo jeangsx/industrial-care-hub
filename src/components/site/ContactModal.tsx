@@ -54,7 +54,7 @@ Saludos cordiales.`;
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="!max-w-[320px] !max-h-[560px] w-full">
+      <DialogContent className="!max-w-[440px] w-full">
         <DialogHeader className="text-left">
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription className="pt-1">

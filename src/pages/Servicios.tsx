@@ -189,7 +189,7 @@ const Servicios = () => {
                       <Button variant="hero" size="lg">Solicitar diagnóstico</Button>
                     }
                   />
-                  <a href="tel:+51938154638">
+                  <a href="https://wa.me/51938154638" target="_blank" rel="noopener noreferrer">
                     <Button variant="ghostLine" size="lg">Hablar con un técnico</Button>
                   </a>
                 </div>

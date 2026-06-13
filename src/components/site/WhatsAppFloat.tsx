@@ -1,5 +1,3 @@
-import { openExternalLink } from "@/lib/open-external-link";
-
 const WHATSAPP_NUMBER = "51938154638";
 const DEFAULT_MSG =
   "Hola ECC, me gustaría recibir información sobre sus servicios térmicos industriales.";
@@ -8,9 +6,12 @@ const WhatsAppFloat = () => {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MSG)}`;
 
   return (
-    <button
-      type="button"
-      onClick={() => openExternalLink(href)}
+    <a
+      href={href}
+      onClick={(e) => {
+        e.preventDefault();
+        window.location.href = href;
+      }}
       aria-label="Escríbenos por WhatsApp"
       className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 group"
     >
@@ -29,7 +30,7 @@ const WhatsAppFloat = () => {
           WhatsApp
         </span>
       </div>
-    </button>
+    </a>
   );
 };
 

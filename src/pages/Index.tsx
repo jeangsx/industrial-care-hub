@@ -9,11 +9,10 @@ import WhyUs from "@/components/site/WhyUs";
 import Footer from "@/components/site/Footer";
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import processEngineer from "@/assets/process-engineer.jpg";
-import processPipework from "@/assets/process-pipework.jpg";
-import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
-import serviceMaintenance from "@/assets/service-maintenance.jpg";
-import burnerRealFire from "@/assets/burner-real-fire.png";
+import campo1 from "@/assets/11zon_IMG_8901.webp";
+import campo2 from "@/assets/11zon_IMG_3325.webp";
+import campo3 from "@/assets/11zon_IMG_0890.webp";
+import campo4 from "@/assets/11zon_IMG_7830.webp";
 import about1 from "@/assets/about-1.webp";
 import about2 from "@/assets/about-2.webp";
 import about3 from "@/assets/about-3.webp";
@@ -96,7 +95,7 @@ const Index = () => {
           )}
           <div className="absolute inset-0 bg-background/30" />
           <div className="absolute left-[55%] top-[48%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,184,90,0.34),transparent_45%)] blur-3xl opacity-95 animate-fire-flicker" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/15 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
         </div>
 
         <div className="relative z-10">
@@ -154,10 +153,10 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
-              <img src={about1} alt="Técnico realizando soldadura en el interior de una caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border row-span-2 aspect-[3/4] sm:aspect-auto" loading="lazy" decoding="async" />
-              <img src={about2} alt="Detalle de quemador y tuberías de caldera" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
-              <img src={about3} alt="Quemador industrial en caldera" className="w-full h-full object-cover rounded-2xl border border-border aspect-[4/3]" loading="lazy" decoding="async" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:max-h-[450px]">
+              <img src={about1} alt="Técnico realizando soldadura en el interior de una caldera industrial" className="w-full h-full object-cover rounded-2xl border border-border sm:row-span-2" loading="lazy" decoding="async" />
+              <img src={about2} alt="Caldera industrial vista frontal completa" className="w-full h-full object-contain rounded-2xl border border-border" loading="lazy" decoding="async" />
+              <img src={about3} alt="Quemador industrial en caldera" className="w-full h-full object-contain rounded-2xl border border-border" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -180,7 +179,7 @@ const Index = () => {
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[processEngineer, serviceMaintenance, burnerRealFire, processPipework].slice(0, 4).map((img, i) => (
+            {[campo1, campo2, campo3, campo4].map((img, i) => (
               <img key={i} src={img} alt={`Trabajo de mantenimiento térmico ECC ${i + 1}`} className="w-full aspect-square object-cover rounded-2xl border border-border hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
             ))}
           </div>

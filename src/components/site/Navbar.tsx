@@ -71,9 +71,6 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
               <span className="size-1.5 rounded-full bg-primary animate-blink" />
               <span>SYS · ONLINE</span>
             </div>
-            <Button variant="editorial" size="sm" asChild className="hidden sm:inline-flex">
-              <NavLink to="/contacto">Iniciar</NavLink>
-            </Button>
 
             {/* Mobile menu */}
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -103,11 +100,6 @@ const Navbar = ({ overlayHero = false }: NavbarProps) => {
                       {l.label}
                     </NavLink>
                   ))}
-                  <Button variant="hero" asChild className="mt-6">
-                    <NavLink to="/contacto" onClick={() => setMobileOpen(false)}>
-                      Iniciar
-                    </NavLink>
-                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>

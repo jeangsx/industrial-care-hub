@@ -54,15 +54,15 @@ Saludos cordiales.`;
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="!max-w-[320px] w-full">
+      <DialogContent className="!max-w-[320px] !max-h-[480px] w-full overflow-y-auto">
         <DialogHeader className="text-left">
           <DialogTitle>{title}</DialogTitle>
-          <DialogDescription className="pt-2">
+          <DialogDescription className="pt-1">
             Envía tu consulta directo a <span className="font-semibold">ericksoria@calderas-ecc.com</span>.
           </DialogDescription>
         </DialogHeader>
 
-        <div className="mt-6 space-y-4">
+        <div className="mt-4 space-y-2.5">
           <div>
             <Label htmlFor="modal-nombre" className="text-xs">
               Nombre
@@ -120,23 +120,23 @@ Saludos cordiales.`;
               id="modal-mensaje"
               value={mensaje}
               onChange={(event) => setMensaje(event.target.value)}
-              className="w-full min-h-[112px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
+              className="w-full min-h-[80px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
               placeholder="Describe tu solicitud o nos cuentas qué necesitas"
             />
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <Button variant="hero" size="sm" type="button" onClick={sendBoth} className="px-5">
             Enviar solicitud
           </Button>
         </div>
 
-        <div className="mt-4 text-xs text-muted-foreground">
+        <div className="mt-3 text-xs text-muted-foreground">
           Tu solicitud se enviará por correo a nuestro equipo técnico.
         </div>
 
-        <div className="mt-4 flex justify-end">
+        <div className="mt-2 flex justify-end">
           <DialogClose asChild>
             <Button variant="secondary" size="sm" type="button">
               Cerrar

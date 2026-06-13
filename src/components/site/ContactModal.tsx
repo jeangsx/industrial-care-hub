@@ -54,7 +54,7 @@ Saludos cordiales.`;
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="!max-w-[320px] !max-h-[480px] w-full overflow-y-auto">
+      <DialogContent className="!max-w-[320px] !max-h-[560px] w-full">
         <DialogHeader className="text-left">
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription className="pt-1">
@@ -62,7 +62,7 @@ Saludos cordiales.`;
           </DialogDescription>
         </DialogHeader>
 
-        <div className="mt-4 space-y-2.5">
+        <div className="mt-5 space-y-3">
           <div>
             <Label htmlFor="modal-nombre" className="text-xs">
               Nombre
@@ -120,19 +120,19 @@ Saludos cordiales.`;
               id="modal-mensaje"
               value={mensaje}
               onChange={(event) => setMensaje(event.target.value)}
-              className="w-full min-h-[80px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
+              className="w-full min-h-[96px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
               placeholder="Describe tu solicitud o nos cuentas qué necesitas"
             />
           </div>
         </div>
 
-        <div className="mt-4 flex justify-center">
+        <div className="mt-5 flex justify-center">
           <Button variant="hero" size="sm" type="button" onClick={sendBoth} className="px-5">
             Enviar solicitud
           </Button>
         </div>
 
-        <div className="mt-3 text-xs text-muted-foreground">
+        <div className="mt-4 text-xs text-muted-foreground">
           Tu solicitud se enviará por correo a nuestro equipo técnico.
         </div>
 

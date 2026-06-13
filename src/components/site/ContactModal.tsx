@@ -95,7 +95,7 @@ Saludos cordiales.`;
               id="modal-telefono"
               value={telefono}
               onChange={(event) => setTelefono(event.target.value)}
-              placeholder="+51 938 154 638"
+              placeholder="Tu número"
               className="mt-1 h-9"
             />
           </div>

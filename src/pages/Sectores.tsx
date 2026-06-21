@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Industries from "@/components/site/Industries";
 import Footer from "@/components/site/Footer";
-import heroSectores from "@/assets/hero-sectores-real.jpg";
+import heroSectores from "@/assets/11zon_IMG_0890.webp";
 
 const Sectores = () => {
   useEffect(() => {

@@ -175,9 +175,9 @@
 }
 
 @keyframes hero-pan {
-  0%   { transform: scale(1.02) translateX(0); }
-  50%  { transform: scale(1.04) translateX(-2%); }
-  100% { transform: scale(1.02) translateX(0); }
+  0%   { transform: scale(1.01) translateX(0); }
+  50%  { transform: scale(1.02) translateX(-1%); }
+  100% { transform: scale(1.01) translateX(0); }
 }
 
 @keyframes heat-haze {
@@ -219,7 +219,7 @@
 .animate-fade-up { animation: fade-up 0.9s var(--ease-editorial) both; }
 .animate-glow { animation: glow-pulse 3s ease-in-out infinite; }
 .animate-blink { animation: blink 1.6s ease-in-out infinite; }
-.animate-hero-pan { animation: hero-pan 25s linear infinite; will-change: transform; }
+.animate-hero-pan { animation: hero-pan 25s linear infinite; will-change: transform; backface-visibility: hidden; }
 .animate-heat-haze { animation: heat-haze 12s ease-in-out infinite; will-change: transform, opacity; }
 .animate-fire-flicker { animation: fire-flicker 1.6s ease-in-out infinite; will-change: transform, opacity; }
 .hero-accent { pointer-events: none; }

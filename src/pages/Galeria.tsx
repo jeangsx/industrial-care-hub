@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import Footer from "@/components/site/Footer";
-import heroGaleria from "@/assets/hero-galeria-real.jpg";
+import heroGaleriaImg from "@/assets/11zon_IMG_7830.webp";
 import g1 from "@/assets/galeria-1.jpg";
 import g2 from "@/assets/galeria-2.jpg";
 import g3 from "@/assets/galeria-3.jpg";
@@ -75,7 +75,7 @@ const Galeria = () => {
     <div className="min-h-screen bg-background text-foreground">
       <HeroHeader
         theme="boiler"
-        backgroundImage={heroGaleria}
+        backgroundImage={heroGaleriaImg}
         eyebrow="Galería · ECC SAC"
         title={
           <>

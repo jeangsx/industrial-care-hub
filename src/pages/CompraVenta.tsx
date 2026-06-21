@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HeroHeader from "@/components/site/HeroHeader";
 import CTA from "@/components/site/CTA";
 import Footer from "@/components/site/Footer";
-import heroCompraVenta from "@/assets/hero-compra-venta-real.jpg";
+import heroCompraVenta from "@/assets/11zon_IMG_3201.webp";
 import burnerRealFire from "@/assets/burner-real-fire.png";
 import serviceDiagnostics from "@/assets/service-diagnostics.jpg";
 

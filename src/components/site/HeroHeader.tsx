@@ -32,7 +32,7 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
           <div className="absolute inset-0 hero-heat animate-heat-haze mix-blend-screen opacity-55" />
           <div className="absolute left-[55%] top-[40%] h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full hero-accent blur-3xl opacity-85 animate-fire-flicker pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),transparent_30%)] opacity-50 pointer-events-none" />
-          <div className="absolute inset-x-0 bottom-0 h-1/3 sm:h-1/2 bg-gradient-to-b from-transparent to-background" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 sm:h-2/3 bg-gradient-to-b from-transparent via-background/50 to-background" />
           <div className="absolute inset-0 gradient-radial opacity-45 mix-blend-screen" />
         </div>
 

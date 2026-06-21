@@ -28,7 +28,7 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
             // @ts-ignore
             fetchpriority="high"
           />
-          <div className="absolute inset-0 bg-background/20" />
+          <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 hero-heat animate-heat-haze mix-blend-screen opacity-55" />
           <div className="absolute left-[55%] top-[40%] h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full hero-accent blur-3xl opacity-85 animate-fire-flicker pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),transparent_30%)] opacity-50 pointer-events-none" />
@@ -41,10 +41,10 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
             <span className="font-mono-ed text-[11px] uppercase tracking-[0.3em] text-primary block mb-5">
               {eyebrow}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-5 sm:mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-5 sm:mb-6 text-balance [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">
               {title}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto px-2">
+            <p className="text-sm sm:text-base md:text-lg text-white font-medium leading-relaxed max-w-3xl mx-auto px-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
               {description}
             </p>
             {children && <div className="mt-10">{children}</div>}

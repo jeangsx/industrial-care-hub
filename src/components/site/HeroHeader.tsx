@@ -20,7 +20,7 @@ const HeroHeader = ({ eyebrow, title, description, children, backgroundImage, th
           <img
             src={backgroundImage ?? defaultHeaderBg}
             alt="Fondo industrial de caldera y quemador con efecto dinámico"
-            className="w-full h-full object-cover object-[50%_50%] md:object-[50%_45%] brightness-[1.05] contrast-[1.08] saturate-[1.1] animate-hero-pan"
+            className="w-full h-full object-cover object-[50%_50%] md:object-[50%_45%] brightness-[1.05] contrast-[1.08] saturate-[1.1] animate-none md:animate-hero-pan"
             width={1600}
             height={900}
             loading="eager"
